@@ -18,17 +18,15 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Image;
-import java.awt.Toolkit;
+import qrcodegen.tools.StaticTools;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.Printable;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
-import javax.swing.InputVerifier;
-import javax.swing.JComponent;
-import javax.swing.JTextField;
-import qrcodegen.tools.StaticTools;
 
 /**
  * A ContentModule implementation for creating QR Codes from valid email

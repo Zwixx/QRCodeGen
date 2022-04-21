@@ -18,6 +18,11 @@
  */
 package qrcodegen.swing;
 
+import qrcodegen.tools.CollectionTools;
+
+import javax.swing.*;
+import javax.swing.event.ChangeListener;
+import javax.swing.filechooser.FileFilter;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
@@ -29,10 +34,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.TransferHandler;
-import javax.swing.event.ChangeListener;
-import javax.swing.filechooser.FileFilter;
-import qrcodegen.tools.CollectionTools;
 
 /**
  *

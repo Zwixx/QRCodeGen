@@ -18,20 +18,13 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.regex.Pattern;
-import qrcodegen.modules.vcard.FNProperty;
-import qrcodegen.modules.vcard.NProperty;
-import qrcodegen.modules.vcard.NicknameProperty;
-import qrcodegen.modules.vcard.OrgProperty;
-import qrcodegen.modules.vcard.PropertyEntry;
-import qrcodegen.modules.vcard.VCardTools;
+import qrcodegen.modules.vcard.*;
 import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
 import qrcodegen.tools.CollectionTools;
-import qrcodegen.tools.StaticTools;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  *

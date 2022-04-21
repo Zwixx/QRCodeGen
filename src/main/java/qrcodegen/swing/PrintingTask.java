@@ -18,12 +18,11 @@
  */
 package qrcodegen.swing;
 
-import java.awt.Component;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 import java.util.ResourceBundle;
-import javax.swing.JOptionPane;
-import javax.swing.SwingWorker;
 
 /**
  *

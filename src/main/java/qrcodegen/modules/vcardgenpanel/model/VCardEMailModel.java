@@ -18,21 +18,19 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 import qrcodegen.modules.vcard.EMailProperty;
 import qrcodegen.modules.vcard.Property;
 import qrcodegen.modules.vcard.PropertyEntry;
-import qrcodegen.modules.vcard.TelProperty;
 import qrcodegen.modules.vcard.TypeParameter;
 import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
 import qrcodegen.tools.CollectionTools;
 import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
-import qrcodegen.tools.StaticTools;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  *

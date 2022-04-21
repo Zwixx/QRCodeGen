@@ -18,21 +18,21 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Component;
-import java.awt.Image;
-import java.awt.event.KeyEvent;
-import java.awt.print.Printable;
-import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.Set;
-import javax.swing.DropMode;
+import qrcodegen.ContentModule;
+import qrcodegen.documentfilter.DocumentSizeFilter;
+
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.AbstractDocument;
-import qrcodegen.ContentModule;
-import qrcodegen.documentfilter.DocumentSizeFilter;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.print.Printable;
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.util.Set;
 
 /**
  * A ContentModule implementation for creating QR Codes from free text.

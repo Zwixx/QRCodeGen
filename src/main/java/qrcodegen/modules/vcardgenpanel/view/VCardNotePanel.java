@@ -18,26 +18,23 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.nio.charset.Charset;
-import java.util.ResourceBundle;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.DocumentFilter;
 import qrcodegen.documentfilter.DocumentEncodableFilter;
 import qrcodegen.documentfilter.DocumentSizeFilter;
 import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
 import qrcodegen.modules.vcardgenpanel.presentationmodel.NotePresentationModel;
 import qrcodegen.tools.StaticTools;
 import qrcodegen.tools.SwingTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.DocumentFilter;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.nio.charset.Charset;
+import java.util.ResourceBundle;
 
 /**
  * This class is designed to work in conjunction with a VCardNoteController and

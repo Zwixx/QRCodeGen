@@ -18,11 +18,11 @@
  */
 package qrcodegen.modules.vcardgenpanel.presentationmodel;
 
+import qrcodegen.modules.vcardgenpanel.InputValidity;
+import qrcodegen.modules.vcardgenpanel.model.VCardNoteModel;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import qrcodegen.modules.vcardgenpanel.InputValidity;
-import qrcodegen.modules.vcardgenpanel.model.AbstractModel;
-import qrcodegen.modules.vcardgenpanel.model.VCardNoteModel;
 
 /**
  *

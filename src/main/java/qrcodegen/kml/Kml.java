@@ -18,11 +18,12 @@
  */
 package qrcodegen.kml;
 
-import java.util.Arrays;
-import java.util.List;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlTransient;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *

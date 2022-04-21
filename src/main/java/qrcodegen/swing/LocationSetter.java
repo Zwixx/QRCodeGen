@@ -18,10 +18,7 @@
  */
 package qrcodegen.swing;
 
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Insets;
-import java.awt.Toolkit;
+import java.awt.*;
 
 /**
  *

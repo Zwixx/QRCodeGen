@@ -20,10 +20,11 @@ package qrcodegen.qrcode.renderer;
 
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.encoder.QRCode;
-import java.beans.PropertyChangeListener;
 import qrcodegen.CodeSizeException;
 import qrcodegen.tools.ImmutableDimension;
 import qrcodegen.tools.TriState;
+
+import java.beans.PropertyChangeListener;
 
 /**
  *

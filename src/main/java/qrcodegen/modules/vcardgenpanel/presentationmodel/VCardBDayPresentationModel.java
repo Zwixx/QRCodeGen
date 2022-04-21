@@ -18,13 +18,12 @@
  */
 package qrcodegen.modules.vcardgenpanel.presentationmodel;
 
+import qrcodegen.modules.vcardgenpanel.InputValidity;
+import qrcodegen.modules.vcardgenpanel.model.DateFormat;
+import qrcodegen.modules.vcardgenpanel.model.VCardBDayModel;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import qrcodegen.modules.vcardgenpanel.InputValidity;
-import qrcodegen.modules.vcardgenpanel.model.AbstractModel;
-import qrcodegen.modules.vcardgenpanel.model.DateFormat;
-import qrcodegen.modules.vcardgenpanel.model.DateModel;
-import qrcodegen.modules.vcardgenpanel.model.VCardBDayModel;
 
 /**
  *

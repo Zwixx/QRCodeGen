@@ -19,7 +19,8 @@
 package qrcodegen;
 
 import qrcodegen.tools.ImmutableDimension;
-import java.awt.Dimension;
+
+import java.awt.*;
 import java.util.ResourceBundle;
 
 /**

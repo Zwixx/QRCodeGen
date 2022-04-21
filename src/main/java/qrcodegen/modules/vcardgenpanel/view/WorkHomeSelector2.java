@@ -18,13 +18,11 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
-import javax.swing.ButtonGroup;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JRadioButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
 
 /**
  *

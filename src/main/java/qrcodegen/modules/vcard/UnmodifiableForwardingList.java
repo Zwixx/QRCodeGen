@@ -19,9 +19,10 @@
 
 package qrcodegen.modules.vcard;
 
+import qrcodegen.tools.ForwardingList;
+
 import java.util.Collection;
 import java.util.List;
-import qrcodegen.tools.ForwardingList;
 
 /**
  * Inspired by Bloch, Joshua: Effective Java: Item 16(p. 84)

@@ -49,13 +49,8 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
-import java.awt.Toolkit;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.font.FontRenderContext;
@@ -64,20 +59,12 @@ import java.awt.font.TextAttribute;
 import java.awt.font.TextLayout;
 import java.text.AttributedCharacterIterator;
 import java.text.AttributedString;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Hashtable;
 import java.util.List;
-import java.util.Map;
-import java.util.WeakHashMap;
-import javax.swing.BorderFactory;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import java.util.*;
 
 /**
  * A resizable component to display and print multiline text. The text can also
- * be rotated in 90° steps, as defined by {@link Rotation}. The vertical
+ * be rotated in 90Â° steps, as defined by {@link Rotation}. The vertical
  * alignment of the text can also be set, as defined by {@link VerticalAlignment}.
  *
  * @author Stefan Ganzer

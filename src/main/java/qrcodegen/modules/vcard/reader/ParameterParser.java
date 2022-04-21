@@ -18,28 +18,13 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Handler;
+import qrcodegen.modules.vcard.*;
+
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import qrcodegen.modules.vcard.Calscale;
-import qrcodegen.modules.vcard.Property;
-import qrcodegen.modules.vcard.PropertyParameter;
-import qrcodegen.modules.vcard.TypeParameter;
-import qrcodegen.modules.vcard.VCardTools;
-import qrcodegen.modules.vcard.ValueType;
 
 /**
  * This class parses the parameter section of a vcard.

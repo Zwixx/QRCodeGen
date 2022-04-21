@@ -18,21 +18,17 @@
  */
 package qrcodegen.modules.vcard;
 
+import org.junit.*;
+import qrcodegen.modules.vcard.VCardTools.CharSubset;
+
 import java.nio.charset.CharacterCodingException;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
+
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import qrcodegen.modules.vcard.VCardTools.CharSubset;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
-import static org.hamcrest.CoreMatchers.*;
 
 /**
  *

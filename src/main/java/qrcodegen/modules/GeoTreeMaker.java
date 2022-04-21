@@ -18,13 +18,14 @@
  */
 package qrcodegen.modules;
 
-import java.util.List;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeModel;
 import qrcodegen.kml.Document;
 import qrcodegen.kml.Folder;
 import qrcodegen.kml.Kml;
 import qrcodegen.kml.Placemark;
+
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import java.util.List;
 
 /**
  *

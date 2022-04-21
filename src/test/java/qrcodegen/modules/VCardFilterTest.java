@@ -4,25 +4,16 @@
  */
 package qrcodegen.modules;
 
-import java.beans.PropertyChangeListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import org.junit.*;
+
+import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
-import javax.swing.event.ChangeListener;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.Test;
+
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
 
 /**
  *
@@ -435,7 +426,7 @@ public class VCardFilterTest {
 		cardFilter.setFilter(Filter.PHOTO);
 		cardFilter.setCard(card);
 		cardFilter.processCard();
-		assertEquals(readFile(getFileForName("vcard_photo_expected.vcf"), ISO_8859_1), cardFilter.getFilteredResult());
+		assertEquals(readFile(getFileForName("files/vcard_photo_expected.vcf"), ISO_8859_1), cardFilter.getFilteredResult());
 	}
 	
 	@Test
@@ -538,7 +529,7 @@ public class VCardFilterTest {
 
 	private static File getFileForName(String name) {
 		try {
-			return new File(FilterTest.class.getResource(name).toURI());
+			return new File(FilterTest.class.getResource("files/" + name).toURI());
 		} catch (URISyntaxException use) {
 			throw new IllegalArgumentException(use);
 		}

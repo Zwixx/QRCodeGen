@@ -18,12 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package qrcodegen;
 
-import java.awt.Image;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.ClipboardOwner;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.Transferable;
-import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.*;
+import java.awt.datatransfer.*;
 import java.io.IOException;
 
 /**

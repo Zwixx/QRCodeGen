@@ -18,10 +18,11 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import java.util.logging.Level;
 import qrcodegen.modules.vcard.NProperty;
 import qrcodegen.modules.vcard.Property;
 import qrcodegen.modules.vcard.VCardTools;
+
+import java.util.logging.Level;
 
 /**
  *

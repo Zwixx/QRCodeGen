@@ -18,9 +18,10 @@
  */
 package qrcodegen.modules.vcard;
 
+import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
+
 import java.util.Calendar;
 import java.util.Locale;
-import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
 
 /**
  *

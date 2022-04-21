@@ -21,16 +21,14 @@
  */
 package qrcodegen;
 
-import java.awt.Component;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.logging.Logger;
-import javax.swing.JComponent;
-import javax.swing.JTextField;
-import javax.swing.TransferHandler;
 
 /**
  * A TransferHandler implementation that supports copying text from JTextFields.

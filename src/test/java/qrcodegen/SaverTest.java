@@ -18,27 +18,21 @@
  */
 package qrcodegen;
 
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.io.File;
-import java.net.URI;
-import java.util.ListResourceBundle;
-import java.util.ResourceBundle;
-import javax.swing.AbstractAction;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import org.junit.Rule;
-import org.junit.internal.runners.statements.ExpectException;
+import org.junit.*;
 import org.junit.rules.ExpectedException;
 import qrcodegen.swing.FileChooser;
 import qrcodegen.swing.FileExtensionFilter;
 import qrcodegen.swing.Saveable;
+
+import java.awt.*;
+import java.io.File;
+import java.net.URI;
+import java.util.ListResourceBundle;
+import java.util.ResourceBundle;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertThat;
 
 /**
  *

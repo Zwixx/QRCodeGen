@@ -18,12 +18,12 @@
  */
 package qrcodegen.modules;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import qrcodegen.Encodable;
 import qrcodegen.IllegalContentException;
+
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.util.regex.Pattern;
 
 /**
  * WirelessNetworkContent creates a string suitable for generating a WiFi QR

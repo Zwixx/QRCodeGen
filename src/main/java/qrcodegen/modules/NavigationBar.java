@@ -18,7 +18,13 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Toolkit;
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.plaf.basic.BasicArrowButton;
+import javax.swing.text.DefaultFormatterFactory;
+import javax.swing.text.NumberFormatter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -27,16 +33,6 @@ import java.beans.PropertyChangeListener;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.ResourceBundle;
-import javax.swing.BoundedRangeModel;
-import javax.swing.DefaultBoundedRangeModel;
-import javax.swing.JFormattedTextField;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.plaf.basic.BasicArrowButton;
-import javax.swing.text.DefaultFormatterFactory;
-import javax.swing.text.NumberFormatter;
 
 /**
  * A component that allows the sequential navigation through a list, and that

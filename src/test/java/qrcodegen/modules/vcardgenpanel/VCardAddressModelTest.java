@@ -4,18 +4,11 @@
  */
 package qrcodegen.modules.vcardgenpanel;
 
-import qrcodegen.modules.vcardgenpanel.model.VCardAddressModel;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.*;
 import qrcodegen.modules.vcard.AdrProperty;
-import qrcodegen.modules.vcard.TypeParameter;
+import qrcodegen.modules.vcardgenpanel.model.VCardAddressModel;
+
+import static org.junit.Assert.*;
 
 /**
  *

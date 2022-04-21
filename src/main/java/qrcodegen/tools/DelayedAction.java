@@ -18,11 +18,12 @@
  */
 package qrcodegen.tools;
 
+import net.jcip.annotations.GuardedBy;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import net.jcip.annotations.GuardedBy;
 
 /**
  *

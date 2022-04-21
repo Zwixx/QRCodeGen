@@ -18,7 +18,8 @@
  */
 package qrcodegen;
 
-import java.awt.Desktop;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseListener;
 import java.io.IOException;
@@ -27,9 +28,6 @@ import java.net.URISyntaxException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
 
 /**
  * Static methods to make an JLabel containing an HTTP-link or an eMail-address

@@ -18,26 +18,14 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EnumMap;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import qrcodegen.modules.vcard.Calscale;
+import org.junit.*;
 import qrcodegen.modules.vcard.Property;
 import qrcodegen.modules.vcard.PropertyParameter;
 import qrcodegen.modules.vcard.TypeParameter;
-import qrcodegen.modules.vcard.ValueType;
+
+import java.util.*;
+
+import static org.junit.Assert.*;
 
 /**
  *

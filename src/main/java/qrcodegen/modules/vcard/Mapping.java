@@ -18,11 +18,7 @@
  */
 package qrcodegen.modules.vcard;
 
-import java.util.EnumMap;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  *

@@ -18,11 +18,7 @@
  */
 package qrcodegen.modules.vcard;
 
-import java.util.Collections;
-import java.util.EnumMap;
-import java.util.EnumSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * An enum of the different properties a v4 VCard can have, like N (Name), ADR

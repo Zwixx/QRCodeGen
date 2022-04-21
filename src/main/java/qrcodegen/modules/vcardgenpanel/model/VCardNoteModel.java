@@ -4,13 +4,13 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import qrcodegen.modules.vcard.NoteProperty;
 import qrcodegen.modules.vcard.PropertyEntry;
 import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
 import qrcodegen.tools.CollectionTools;
-import qrcodegen.tools.StaticTools;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *

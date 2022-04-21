@@ -18,20 +18,16 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import java.awt.print.Printable;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.number.OrderingComparison.*;
+import org.junit.*;
 import qrcodegen.ContentModule;
 import qrcodegen.modules.vcardgenpanel.model.VCardModel;
 import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardPresentationModel;
+
+import java.awt.print.Printable;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 /**
  *

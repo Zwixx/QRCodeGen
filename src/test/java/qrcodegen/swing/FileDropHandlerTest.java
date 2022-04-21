@@ -18,22 +18,17 @@
  */
 package qrcodegen.swing;
 
+import org.junit.*;
+
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.number.OrderingComparison.*;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
 
 /**
  *

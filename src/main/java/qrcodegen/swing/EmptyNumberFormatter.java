@@ -29,9 +29,9 @@
  */
 package qrcodegen.swing;
 
+import javax.swing.text.NumberFormatter;
 import java.text.NumberFormat;
 import java.text.ParseException;
-import javax.swing.text.NumberFormatter;
 
 /**
  * In addition to its superclass NumberFormatter, this class converts to/from

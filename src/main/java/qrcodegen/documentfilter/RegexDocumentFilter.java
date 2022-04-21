@@ -18,10 +18,10 @@
  */
 package qrcodegen.documentfilter;
 
-import java.util.regex.Pattern;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
+import java.util.regex.Pattern;
 
 /**
  *

@@ -18,8 +18,8 @@
  */
 package qrcodegen;
 
-import java.awt.Component;
-import java.awt.Image;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.print.Printable;
 import java.nio.charset.Charset;
@@ -27,7 +27,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import javax.swing.event.ChangeListener;
 
 /**
  * A ContentModule is a plug-in for the main QRCodeGen module. It provides the

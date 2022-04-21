@@ -18,21 +18,18 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
+import qrcodegen.modules.vcard.PropertyEntry;
+import qrcodegen.modules.vcard.TypeParameter;
+import qrcodegen.modules.vcard.UrlProperty;
+import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
+import qrcodegen.tools.CollectionTools;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
-import qrcodegen.modules.vcard.AdrProperty;
-import qrcodegen.modules.vcard.PropertyEntry;
-import qrcodegen.modules.vcard.TypeParameter;
-import qrcodegen.modules.vcard.UrlProperty;
-import qrcodegen.modules.vcardgenpanel.IllegalInputException;
-import qrcodegen.modules.vcardgenpanel.InputValidity;
-import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
-import qrcodegen.tools.CollectionTools;
-import qrcodegen.tools.StaticTools;
 
 /**
  *

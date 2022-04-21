@@ -18,15 +18,13 @@
  */
 package qrcodegen.documentfilter;
 
-import javax.swing.JTextField;
+import org.junit.*;
+
+import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.JTextComponent;
-import org.junit.After;
-import org.junit.AfterClass;
-import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  *

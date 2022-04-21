@@ -19,18 +19,12 @@
 
 package qrcodegen.modules;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.number.OrderingComparison.*;
+import org.junit.*;
 import qrcodegen.math.PreciseDecimalArcDegree;
 import qrcodegen.uri.GeoURI;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertThat;
 
 /**
  *

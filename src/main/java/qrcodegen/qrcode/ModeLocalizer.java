@@ -19,6 +19,7 @@
 package qrcodegen.qrcode;
 
 import com.google.zxing.qrcode.decoder.Mode;
+
 import java.util.Locale;
 import java.util.ResourceBundle;
 

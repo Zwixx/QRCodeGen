@@ -18,19 +18,20 @@
  */
 package qrcodegen;
 
+import qrcodegen.swing.FileChooser;
+import qrcodegen.swing.FileExtensionFilter;
+import qrcodegen.swing.Saveable;
+import qrcodegen.tools.Shortener;
+import qrcodegen.tools.StaticTools;
+import qrcodegen.tools.TextShortener;
+
+import javax.swing.*;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.File;
 import java.net.URI;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
-import javax.swing.JOptionPane;
-import qrcodegen.tools.StaticTools;
-import qrcodegen.swing.FileChooser;
-import qrcodegen.swing.FileExtensionFilter;
-import qrcodegen.swing.Saveable;
-import qrcodegen.tools.Shortener;
-import qrcodegen.tools.TextShortener;
 
 /**
  *

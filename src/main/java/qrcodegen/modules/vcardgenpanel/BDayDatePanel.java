@@ -18,25 +18,21 @@
  */
 package qrcodegen.modules.vcardgenpanel;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.ResourceBundle;
-import javax.swing.GroupLayout;
+import qrcodegen.documentfilter.IntegerRangeDocumentFilter;
+import qrcodegen.modules.vcardgenpanel.model.VCardBDayModel;
+import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardBDayPresentationModel;
+import qrcodegen.modules.vcardgenpanel.view.Updateable;
+import qrcodegen.modules.vcardgenpanel.view.UpdateableDocumentListener;
+import qrcodegen.tools.SwingTools;
+
+import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.DocumentFilter;
-import qrcodegen.documentfilter.IntegerRangeDocumentFilter;
-import qrcodegen.modules.vcardgenpanel.view.Updateable;
-import qrcodegen.modules.vcardgenpanel.view.UpdateableDocumentListener;
-import qrcodegen.modules.vcardgenpanel.model.DateModel;
-import qrcodegen.modules.vcardgenpanel.model.VCardBDayModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.DatePresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardBDayPresentationModel;
-import qrcodegen.tools.SwingTools;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ResourceBundle;
 
 /**
  *

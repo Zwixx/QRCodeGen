@@ -18,15 +18,10 @@
  */
 package qrcodegen.math;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
+
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
-import static org.hamcrest.CoreMatchers.*;
 
 /**
  *

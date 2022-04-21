@@ -21,8 +21,9 @@
  */
 package qrcodegen;
 
-import java.util.ResourceBundle;
 import qrcodegen.tools.SwingTools;
+
+import java.util.ResourceBundle;
 
 /**
  *

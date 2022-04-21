@@ -18,8 +18,8 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Image;
-import java.awt.Toolkit;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -28,9 +28,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
-import javax.swing.InputVerifier;
-import javax.swing.JComponent;
-import javax.swing.JTextField;
 
 /**
  * A ContentModule implementation for creating QR Codes from valid URLs.

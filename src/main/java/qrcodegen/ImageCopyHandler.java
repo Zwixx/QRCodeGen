@@ -21,18 +21,13 @@
  */
 package qrcodegen;
 
-import java.awt.Component;
-import java.awt.Image;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.logging.Logger;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.TransferHandler;
 
 /**
  * A TransferHandler implementation that supports dragging images from JLabel.

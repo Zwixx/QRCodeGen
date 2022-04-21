@@ -18,9 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package qrcodegen.modules;
 
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.IndexColorModel;
@@ -72,7 +70,7 @@ public class RotatedBufferedImage extends BufferedImage {
 	/**
 	 * Creates a new RotatedBufferedImage from this image, and rotates it to the given angle.
 	 * The angle to rotate to is independent from this image' current angle, that is if this image'
-	 * rotation is 270°, and you want the new image to have an angle of 0°, you specifiy {@link Rotation R0}.
+	 * rotation is 270Â°, and you want the new image to have an angle of 0Â°, you specifiy {@link Rotation R0}.
 	 * @param r the angle the new image shall have. This angle is independent from the current angle.
 	 * @return a new RotatedBufferedImage with this image' content rotated to the given angle
 	 */
@@ -86,7 +84,7 @@ public class RotatedBufferedImage extends BufferedImage {
 	/**
 	 * Returns a new RotatedBufferedImage that contains the given image rotated
 	 * by rotation, and which {@link getRotation()} returns the given actualRotation.
-	 * This way you can rotate an image from 90° for 270° to 0°, with rotation=270 and actualRotation=0.
+	 * This way you can rotate an image from 90Â° for 270Â° to 0Â°, with rotation=270 and actualRotation=0.
 	 * @param image
 	 * @param rotation
 	 * @param actualRotation

@@ -4,9 +4,6 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.util.Calendar;
-import java.util.Locale;
-import qrcodegen.modules.vcard.Calscale;
 import qrcodegen.modules.vcardgenpanel.InputValidity;
 import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
 

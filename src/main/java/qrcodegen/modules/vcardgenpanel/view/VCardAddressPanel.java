@@ -18,21 +18,6 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.nio.charset.Charset;
-import java.util.ResourceBundle;
-import java.util.Set;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.text.DocumentFilter;
 import qrcodegen.documentfilter.DocumentDoubleQuoteFilter;
 import qrcodegen.documentfilter.DocumentEncodableFilter;
 import qrcodegen.documentfilter.DocumentSizeFilter;
@@ -41,6 +26,18 @@ import qrcodegen.modules.vcardgenpanel.model.VCardAddressModel;
 import qrcodegen.modules.vcardgenpanel.presentationmodel.AddressPresentationModel;
 import qrcodegen.tools.StaticTools;
 import qrcodegen.tools.SwingTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.text.DocumentFilter;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.nio.charset.Charset;
+import java.util.ResourceBundle;
+import java.util.Set;
 
 /**
  *

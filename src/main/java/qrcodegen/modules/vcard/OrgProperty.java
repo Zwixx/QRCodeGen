@@ -18,11 +18,11 @@
  */
 package qrcodegen.modules.vcard;
 
+import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
 
 /**
  * Implements the ORG property.

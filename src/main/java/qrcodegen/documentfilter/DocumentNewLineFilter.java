@@ -17,11 +17,10 @@
  */
 package qrcodegen.documentfilter;
 
-import java.util.regex.Pattern;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
-import javax.swing.text.DocumentFilter.FilterBypass;
+import java.util.regex.Pattern;
 
 /**
  * A DocumentFilter implementation that prevents entering the newline character.

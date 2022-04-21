@@ -18,7 +18,7 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Dimension;
+import java.awt.*;
 import java.util.ResourceBundle;
 
 /**

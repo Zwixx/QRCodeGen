@@ -18,10 +18,9 @@
  */
 package qrcodegen;
 
+import javax.swing.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
-import javax.swing.JComponent;
-import javax.swing.TransferHandler;
 
 /**
  *

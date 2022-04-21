@@ -18,34 +18,20 @@
  */
 package qrcodegen.modules.vcardgenpanel.controller;
 
-import java.awt.Component;
-import java.awt.Image;
+import qrcodegen.ContentModule;
+import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
+import qrcodegen.modules.vcardgenpanel.model.VCardModel;
+import qrcodegen.modules.vcardgenpanel.presentationmodel.*;
+import qrcodegen.modules.vcardgenpanel.view.*;
+
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.print.Printable;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import javax.swing.event.ChangeListener;
-import qrcodegen.ContentModule;
-import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
-import qrcodegen.modules.vcardgenpanel.model.VCardModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.AddressPresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.NamePresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.NotePresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.TelephonePresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardBDayPresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardEMailPresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardPresentationModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardUrlPresentationModel;
-import qrcodegen.modules.vcardgenpanel.view.VCardAddressPanel;
-import qrcodegen.modules.vcardgenpanel.view.VCardBDayPanel;
-import qrcodegen.modules.vcardgenpanel.view.VCardEMailPanel;
-import qrcodegen.modules.vcardgenpanel.view.VCardNamePanel;
-import qrcodegen.modules.vcardgenpanel.view.VCardNotePanel;
-import qrcodegen.modules.vcardgenpanel.view.VCardTelephonePanel;
-import qrcodegen.modules.vcardgenpanel.view.VCardUrlPanel;
-import qrcodegen.modules.vcardgenpanel.view.VCardView;
 
 /**
  * This class is designed to work in conjunction with a VCardView.

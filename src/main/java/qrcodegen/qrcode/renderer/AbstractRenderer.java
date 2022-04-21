@@ -18,9 +18,10 @@
  */
 package qrcodegen.qrcode.renderer;
 
+import qrcodegen.tools.ImmutableDimension;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
-import qrcodegen.tools.ImmutableDimension;
 
 /**
  *

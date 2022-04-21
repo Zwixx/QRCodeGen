@@ -18,7 +18,7 @@
  */
 package qrcodegen.modules.vcardgenpanel;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  *

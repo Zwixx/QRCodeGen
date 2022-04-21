@@ -18,7 +18,7 @@
  */
 package qrcodegen;
 
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.plaf.basic.BasicComboBoxEditor;
 
 /**

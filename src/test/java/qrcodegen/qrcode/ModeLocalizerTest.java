@@ -19,17 +19,16 @@
 package qrcodegen.qrcode;
 
 import com.google.zxing.qrcode.decoder.Mode;
-import java.util.Locale;
-import javax.jws.WebParam;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import java.util.Locale;
+
 import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.assertThat;
 
 /**
  *

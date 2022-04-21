@@ -18,17 +18,17 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Set;
-import java.util.regex.Pattern;
 import qrcodegen.modules.vcard.AdrProperty;
 import qrcodegen.modules.vcard.PropertyEntry;
 import qrcodegen.modules.vcard.TypeParameter;
 import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
 import qrcodegen.tools.CollectionTools;
-import qrcodegen.tools.StaticTools;
+
+import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 /**
  * This class models a VCard address. It is designed to work in conjunction with

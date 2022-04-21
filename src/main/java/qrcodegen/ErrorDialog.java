@@ -18,30 +18,16 @@
  */
 package qrcodegen;
 
-import java.awt.Frame;
-import java.awt.GraphicsConfiguration;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.image.BufferedImage;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.logging.Level;
-import javax.swing.AbstractAction;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JEditorPane;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JRootPane;
-import javax.swing.JScrollPane;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.UIManager;
-import javax.swing.WindowConstants;
 import qrcodegen.tools.StaticTools;
 import qrcodegen.tools.SwingTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
 
 /**
  *

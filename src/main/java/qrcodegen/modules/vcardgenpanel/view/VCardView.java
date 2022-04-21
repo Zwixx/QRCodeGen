@@ -18,8 +18,24 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import java.awt.Component;
-import java.awt.Image;
+import qrcodegen.ContentModule;
+import qrcodegen.Saver;
+import qrcodegen.modules.vcard.VCardTools;
+import qrcodegen.modules.vcardgenpanel.InputValidity;
+import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardPresentationModel;
+import qrcodegen.swing.ExtendedJFileChooser;
+import qrcodegen.swing.FileExtensionFilter;
+import qrcodegen.swing.Saveable;
+import qrcodegen.tools.StaticTools;
+import qrcodegen.tools.SwingTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.event.ChangeListener;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.Printable;
@@ -33,29 +49,6 @@ import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTabbedPane;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.event.ChangeListener;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import qrcodegen.ContentModule;
-import qrcodegen.Saver;
-import qrcodegen.modules.vcard.VCardTools;
-import qrcodegen.modules.vcardgenpanel.InputValidity;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardPresentationModel;
-import qrcodegen.swing.ExtendedJFileChooser;
-import qrcodegen.swing.FileExtensionFilter;
-import qrcodegen.swing.Saveable;
-import qrcodegen.tools.StaticTools;
-import qrcodegen.tools.SwingTools;
 
 /**
  * This class is designed to work in conjunction with a VCardController.

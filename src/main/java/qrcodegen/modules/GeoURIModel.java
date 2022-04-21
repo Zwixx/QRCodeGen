@@ -18,8 +18,6 @@
  */
 package qrcodegen.modules;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import qrcodegen.kml.Coordinates;
 import qrcodegen.math.Degree;
 import qrcodegen.math.PreciseArcDegree;
@@ -28,6 +26,9 @@ import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
 import qrcodegen.tools.StaticTools;
 import qrcodegen.tools.TriState;
 import qrcodegen.uri.GeoURI;
+
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 
 /**
  *

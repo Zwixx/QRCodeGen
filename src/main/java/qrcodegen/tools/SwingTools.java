@@ -18,12 +18,11 @@
  */
 package qrcodegen.tools;
 
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.GraphicsConfiguration;
-import java.awt.HeadlessException;
-import java.awt.Insets;
-import java.awt.Toolkit;
+import javax.swing.*;
+import javax.swing.text.AbstractDocument;
+import javax.swing.text.DocumentFilter;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -31,16 +30,6 @@ import java.awt.event.WindowEvent;
 import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.AbstractButton;
-import javax.swing.ComboBoxModel;
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JDialog;
-import javax.swing.KeyStroke;
-import javax.swing.MutableComboBoxModel;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.DocumentFilter;
-import javax.swing.text.JTextComponent;
 
 /**
  *

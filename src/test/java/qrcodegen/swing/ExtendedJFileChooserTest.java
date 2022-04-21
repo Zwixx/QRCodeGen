@@ -18,20 +18,14 @@
  */
 package qrcodegen.swing;
 
-import qrcodegen.swing.ExtendedJFileChooser;
-import qrcodegen.swing.FileExtensionFilter;
-import java.io.File;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Rule;
+import org.junit.*;
 import org.junit.rules.ExpectedException;
+
+import javax.swing.filechooser.FileFilter;
+import java.io.File;
+
 import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.assertThat;
 
 /**
  *

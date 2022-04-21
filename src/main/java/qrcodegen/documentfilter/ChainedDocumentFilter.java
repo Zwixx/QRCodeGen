@@ -4,17 +4,9 @@
  */
 package qrcodegen.documentfilter;
 
-import java.awt.Component;
-import java.awt.KeyboardFocusManager;
-import java.awt.Toolkit;
-import javax.swing.LookAndFeel;
-import javax.swing.UIManager;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Document;
-import javax.swing.text.DocumentFilter;
-import javax.swing.text.JTextComponent;
+import javax.swing.*;
+import javax.swing.text.*;
+import java.awt.*;
 
 /**
  * A single DocumentFilter can be set on an AbstractDocument. There may be times

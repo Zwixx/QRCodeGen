@@ -18,23 +18,21 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import java.awt.Component;
+import qrcodegen.modules.vcard.TypeParameter;
+import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
+import qrcodegen.modules.vcardgenpanel.model.VCardTelModel;
+import qrcodegen.modules.vcardgenpanel.presentationmodel.TelephonePresentationModel;
+import qrcodegen.tools.StaticTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
-import javax.swing.BoxLayout;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import qrcodegen.modules.vcard.TypeParameter;
-import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
-import qrcodegen.modules.vcardgenpanel.model.VCardTelModel;
-import qrcodegen.modules.vcardgenpanel.presentationmodel.TelephonePresentationModel;
-import qrcodegen.tools.StaticTools;
 
 /**
  *

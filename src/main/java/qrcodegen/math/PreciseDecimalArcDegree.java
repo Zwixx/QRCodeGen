@@ -18,10 +18,10 @@
  */
 package qrcodegen.math;
 
+import net.jcip.annotations.Immutable;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.math.RoundingMode;
-import net.jcip.annotations.Immutable;
 
 /**
  *
@@ -102,7 +102,7 @@ public final class PreciseDecimalArcDegree implements Degree, Comparable<Precise
 
 	@Override
 	public String toString() {
-		String dms = String.format("%1$d° %2$d' %3$s''", getDegree(), getMinute(), Double.toString(getDecimalSecond()));
+		String dms = String.format("%1$dÂ° %2$d' %3$s''", getDegree(), getMinute(), Double.toString(getDecimalSecond()));
 		return Double.toString(getValue()).concat(" == ").concat(dms);
 	}
 

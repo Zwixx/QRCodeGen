@@ -18,24 +18,16 @@
  */
 package qrcodegen.kml;
 
-import qrcodegen.kml.KMLFileReader;
+import org.junit.*;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.logging.Logger;
 import java.util.zip.ZipException;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
-import static org.hamcrest.CoreMatchers.*;
-import qrcodegen.kml.Kml;
+
+import static org.junit.Assert.assertNotNull;
 
 /**
  *

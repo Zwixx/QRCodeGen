@@ -18,28 +18,17 @@
  */
 package qrcodegen.modules.vcard.reader;
 
+import qrcodegen.modules.vcard.*;
+import qrcodegen.tools.CollectionTools;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import qrcodegen.modules.vcard.FNProperty;
-import qrcodegen.modules.vcard.Property;
-import qrcodegen.modules.vcard.PropertyEntry;
-import qrcodegen.modules.vcard.VCard;
-import qrcodegen.modules.vcard.VCardProperty;
-import qrcodegen.modules.vcard.VCardTools;
-import qrcodegen.tools.CollectionTools;
-import qrcodegen.tools.StaticTools;
 
 /**
  * Reads a single v4 VCard.

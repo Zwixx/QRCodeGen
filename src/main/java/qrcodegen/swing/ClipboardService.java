@@ -18,20 +18,15 @@
  */
 package qrcodegen.swing;
 
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.FlavorEvent;
-import java.awt.datatransfer.FlavorListener;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
-import java.awt.datatransfer.UnsupportedFlavorException;
+import qrcodegen.tools.TriState;
+
+import javax.swing.event.SwingPropertyChangeSupport;
+import java.awt.datatransfer.*;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.event.SwingPropertyChangeSupport;
-import qrcodegen.tools.TriState;
 
 /**
  *

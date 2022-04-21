@@ -25,15 +25,6 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.google.zxing.qrcode.decoder.Mode;
 import com.google.zxing.qrcode.encoder.Encoder;
 import com.google.zxing.qrcode.encoder.QRCode;
-import java.awt.image.BufferedImage;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
-import java.nio.charset.Charset;
-import java.nio.charset.CharsetEncoder;
-import java.util.EnumMap;
-import java.util.Map;
-import java.util.ResourceBundle;
 import qrcodegen.qrcode.QRCodeFactory;
 import qrcodegen.qrcode.QRCodeInterface;
 import qrcodegen.qrcode.renderer.FixedSizeRenderer;
@@ -43,6 +34,16 @@ import qrcodegen.qrcode.renderer.Renderable;
 import qrcodegen.tools.ImmutableDimension;
 import qrcodegen.tools.StaticTools;
 import qrcodegen.tools.TriState;
+
+import java.awt.image.BufferedImage;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 /**
  * Creates QR Codes from objects implementing the {@link qrcodegen.Encodable}

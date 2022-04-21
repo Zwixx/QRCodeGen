@@ -18,6 +18,9 @@
  */
 package qrcodegen.modules.vcard.reader;
 
+import org.junit.*;
+import qrcodegen.modules.vcard.*;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -25,27 +28,8 @@ import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.util.EnumSet;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+
 import static org.junit.Assert.*;
-import qrcodegen.modules.vcard.AdrProperty;
-import qrcodegen.modules.vcard.BDayProperty;
-import qrcodegen.modules.vcard.EMailProperty;
-import qrcodegen.modules.vcard.FNProperty;
-import qrcodegen.modules.vcard.IllegalCharacterException;
-import qrcodegen.modules.vcard.KindProperty;
-import qrcodegen.modules.vcard.NProperty;
-import qrcodegen.modules.vcard.NicknameProperty;
-import qrcodegen.modules.vcard.NoteProperty;
-import qrcodegen.modules.vcard.OrgProperty;
-import qrcodegen.modules.vcard.TelProperty;
-import qrcodegen.modules.vcard.TypeParameter;
-import qrcodegen.modules.vcard.UrlProperty;
-import qrcodegen.modules.vcard.VCard;
-import qrcodegen.modules.vcard.VCardTools;
 
 /**
  *

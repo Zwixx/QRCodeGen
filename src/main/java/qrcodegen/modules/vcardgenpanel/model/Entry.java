@@ -18,12 +18,13 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
+import qrcodegen.modules.vcard.Property;
+import qrcodegen.modules.vcard.TypeParameter;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.Set;
-import qrcodegen.modules.vcard.Property;
-import qrcodegen.modules.vcard.TypeParameter;
 
 /**
  *

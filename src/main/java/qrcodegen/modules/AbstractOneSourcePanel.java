@@ -18,22 +18,23 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Component;
+import qrcodegen.ContentModule;
+import qrcodegen.documentfilter.DocumentNewLineFilter;
+import qrcodegen.documentfilter.DocumentSizeFilter;
+import qrcodegen.tools.StaticTools;
+
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.AbstractDocument;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.Set;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.AbstractDocument;
-import qrcodegen.ContentModule;
-import qrcodegen.documentfilter.DocumentNewLineFilter;
-import qrcodegen.documentfilter.DocumentSizeFilter;
-import qrcodegen.tools.StaticTools;
 
 /**
  * An abstract class suitable for creating content modules whose input data is a

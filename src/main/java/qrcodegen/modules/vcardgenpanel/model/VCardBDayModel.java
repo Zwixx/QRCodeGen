@@ -18,16 +18,16 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.ArrayList;
-import java.util.List;
 import qrcodegen.modules.vcard.BDayProperty;
 import qrcodegen.modules.vcard.Calscale;
 import qrcodegen.modules.vcard.PropertyEntry;
 import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
 import qrcodegen.tools.CollectionTools;
-import qrcodegen.tools.StaticTools;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *

@@ -18,9 +18,14 @@
  */
 package qrcodegen.swing;
 
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.Toolkit;
+import qrcodegen.tools.StaticTools;
+
+import javax.swing.*;
+import javax.swing.event.PopupMenuEvent;
+import javax.swing.event.PopupMenuListener;
+import javax.swing.text.DefaultEditorKit;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.event.ActionEvent;
@@ -28,18 +33,6 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.Icon;
-import javax.swing.JFormattedTextField;
-import javax.swing.JPopupMenu;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
-import javax.swing.event.PopupMenuEvent;
-import javax.swing.event.PopupMenuListener;
-import javax.swing.text.DefaultEditorKit;
-import javax.swing.text.JTextComponent;
-import qrcodegen.tools.StaticTools;
 
 /**
  *

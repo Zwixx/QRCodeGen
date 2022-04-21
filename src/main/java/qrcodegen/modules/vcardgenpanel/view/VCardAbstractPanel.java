@@ -4,8 +4,9 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import javax.swing.JPanel;
 import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
+
+import javax.swing.*;
 
 /**
  *

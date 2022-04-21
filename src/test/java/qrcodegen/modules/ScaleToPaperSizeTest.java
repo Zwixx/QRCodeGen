@@ -18,14 +18,13 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Dimension;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.hamcrest.Matchers.*;
+import org.junit.*;
+
+import java.awt.*;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 //import static org.hamcrest.CoreMatchers.*;
 
 /**

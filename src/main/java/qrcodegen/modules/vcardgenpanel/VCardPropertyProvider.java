@@ -18,10 +18,10 @@
  */
 package qrcodegen.modules.vcardgenpanel;
 
+import qrcodegen.modules.vcard.PropertyEntry;
+
 import java.beans.PropertyChangeListener;
 import java.util.List;
-import javax.swing.JPanel;
-import qrcodegen.modules.vcard.PropertyEntry;
 
 /**
  *

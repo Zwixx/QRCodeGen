@@ -18,11 +18,12 @@
  */
 package qrcodegen.swing;
 
-import java.io.File;
-import java.util.Locale;
+import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
+
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import qrcodegen.tools.ExtendedIndexOutOfBoundsException;
+import java.io.File;
+import java.util.Locale;
 
 /**
  *

@@ -18,15 +18,13 @@
  */
 package qrcodegen;
 
-import java.awt.Toolkit;
+import javax.swing.*;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
-import javax.swing.JComponent;
-import javax.swing.JOptionPane;
-import javax.swing.TransferHandler;
-import javax.swing.text.JTextComponent;
 
 /**
  *

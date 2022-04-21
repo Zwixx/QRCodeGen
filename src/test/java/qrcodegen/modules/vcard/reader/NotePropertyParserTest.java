@@ -18,14 +18,11 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import qrcodegen.modules.vcard.NoteProperty;
+import org.junit.*;
 import qrcodegen.modules.vcard.Property;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *

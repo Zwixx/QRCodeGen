@@ -18,25 +18,13 @@
  */
 package qrcodegen.tools;
 
-import java.awt.Image;
-import java.awt.Toolkit;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
-import java.util.Set;
-import javax.swing.ComboBoxModel;
-import javax.swing.KeyStroke;
-import javax.swing.MutableComboBoxModel;
+import java.util.*;
 
 /**
  *

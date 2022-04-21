@@ -4,11 +4,12 @@
  */
 package qrcodegen.modules.vcardgenpanel.presentationmodel;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import qrcodegen.modules.vcardgenpanel.InputValidity;
 import qrcodegen.modules.vcardgenpanel.model.AbstractModel;
 import qrcodegen.modules.vcardgenpanel.model.DateModel;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
 /**
  *

@@ -18,9 +18,26 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.Image;
+import qrcodegen.ContentModule;
+import qrcodegen.PrintUtilities;
+import qrcodegen.QRView;
+import qrcodegen.documentfilter.ChainedDocumentFilter;
+import qrcodegen.documentfilter.DocumentNewLineFilter;
+import qrcodegen.documentfilter.DocumentSizeFilter;
+import qrcodegen.documentfilter.RegexDocumentFilter;
+import qrcodegen.swing.*;
+import qrcodegen.tools.StaticTools;
+import qrcodegen.tools.TriState;
+
+import javax.swing.*;
+import javax.swing.JFormattedTextField.AbstractFormatterFactory;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.AbstractDocument;
+import javax.swing.text.DefaultFormatterFactory;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -34,30 +51,6 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.regex.Pattern;
-import javax.swing.JFormattedTextField;
-import javax.swing.JFormattedTextField.AbstractFormatterFactory;
-import javax.swing.JOptionPane;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.DefaultFormatterFactory;
-import qrcodegen.ContentModule;
-import qrcodegen.PrintUtilities;
-import qrcodegen.QRView;
-import qrcodegen.documentfilter.ChainedDocumentFilter;
-import qrcodegen.documentfilter.DocumentNewLineFilter;
-import qrcodegen.documentfilter.DocumentSizeFilter;
-import qrcodegen.documentfilter.RegexDocumentFilter;
-import qrcodegen.tools.StaticTools;
-import qrcodegen.tools.TriState;
-import qrcodegen.swing.AbstractGroupFormatter;
-import qrcodegen.swing.BaseFormatter;
-import qrcodegen.swing.CaretPositionListener;
-import qrcodegen.swing.DisplayGroupFormatter;
-import qrcodegen.swing.EditGroupFormatter;
 
 /**
  * A ContentModule implementation for creating QR Codes from wireless networks'

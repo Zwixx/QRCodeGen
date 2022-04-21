@@ -18,12 +18,9 @@
  */
 package qrcodegen.modules;
 
-import java.awt.Font;
-import java.awt.Image;
+import javax.swing.*;
+import java.awt.*;
 import java.util.ResourceBundle;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 /**
  * This class manages the configuration of a FoldingCardPrinter used to print

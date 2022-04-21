@@ -18,11 +18,12 @@
  */
 package qrcodegen.uri;
 
+import qrcodegen.math.DecimalArcDegree;
+import qrcodegen.math.Degree;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
-import qrcodegen.math.DecimalArcDegree;
-import qrcodegen.math.Degree;
 
 /**
  * A geo URI according to RFC 5870. CRS = WGS84

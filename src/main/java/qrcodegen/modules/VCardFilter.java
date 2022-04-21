@@ -21,15 +21,15 @@
  */
 package qrcodegen.modules;
 
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.EventListenerList;
+import javax.swing.event.SwingPropertyChangeSupport;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.Set;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.EventListenerList;
-import javax.swing.event.SwingPropertyChangeSupport;
 
 /**
  * This class allows to remove (filter) parts from VCards. This class is not

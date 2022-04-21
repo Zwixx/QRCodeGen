@@ -18,14 +18,14 @@
  */
 package qrcodegen;
 
+import qrcodegen.ErrorDialog.MessageType;
+import qrcodegen.ErrorDialog.Type;
+
+import javax.swing.*;
 import java.text.MessageFormat;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import qrcodegen.ErrorDialog.MessageType;
-import qrcodegen.ErrorDialog.Type;
 
 /**
  * Sets the look&feel and instantiates QRView. Registers an

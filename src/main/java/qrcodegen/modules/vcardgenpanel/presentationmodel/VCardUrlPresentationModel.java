@@ -18,13 +18,14 @@
  */
 package qrcodegen.modules.vcardgenpanel.presentationmodel;
 
+import qrcodegen.modules.vcard.TypeParameter;
+import qrcodegen.modules.vcardgenpanel.InputValidity;
+import qrcodegen.modules.vcardgenpanel.model.VCardUrlModel;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.EnumSet;
 import java.util.Set;
-import qrcodegen.modules.vcard.TypeParameter;
-import qrcodegen.modules.vcardgenpanel.InputValidity;
-import qrcodegen.modules.vcardgenpanel.model.VCardUrlModel;
 
 /**
  *

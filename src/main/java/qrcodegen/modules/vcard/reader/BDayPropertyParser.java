@@ -18,14 +18,14 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import java.util.logging.Level;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import qrcodegen.modules.vcard.BDayProperty;
-import qrcodegen.modules.vcard.Calscale;
 import qrcodegen.modules.vcard.Property;
 import qrcodegen.modules.vcard.VCardTools;
 import qrcodegen.modules.vcard.ValueType;
+
+import java.util.logging.Level;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *

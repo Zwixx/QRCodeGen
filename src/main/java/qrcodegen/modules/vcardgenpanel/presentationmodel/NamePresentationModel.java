@@ -18,10 +18,11 @@
  */
 package qrcodegen.modules.vcardgenpanel.presentationmodel;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import qrcodegen.modules.vcardgenpanel.InputValidity;
 import qrcodegen.modules.vcardgenpanel.model.VCardNameModel;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
 /**
  * This class is to be used with a VCardNamePanel and a VCardNameModel. It

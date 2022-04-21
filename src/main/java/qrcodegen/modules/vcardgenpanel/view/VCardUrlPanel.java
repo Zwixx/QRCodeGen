@@ -18,26 +18,16 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
-import javax.swing.BoxLayout;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JPanel;
-import qrcodegen.modules.vcard.Property;
-import qrcodegen.modules.vcard.PropertyEntry;
-import qrcodegen.modules.vcard.UrlProperty;
-import qrcodegen.modules.vcard.VCardProperty;
 import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
-import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
 import qrcodegen.modules.vcardgenpanel.model.VCardUrlModel;
 import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardUrlPresentationModel;
 import qrcodegen.tools.StaticTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ResourceBundle;
 
 /**
  *

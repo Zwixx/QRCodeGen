@@ -4,16 +4,17 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.ArrayList;
-import java.util.List;
 import qrcodegen.modules.vcard.FNProperty;
 import qrcodegen.modules.vcard.Property;
 import qrcodegen.modules.vcard.PropertyEntry;
 import qrcodegen.modules.vcard.VCard;
 import qrcodegen.modules.vcardgenpanel.IllegalInputException;
 import qrcodegen.modules.vcardgenpanel.VCardPropertyProvider;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *

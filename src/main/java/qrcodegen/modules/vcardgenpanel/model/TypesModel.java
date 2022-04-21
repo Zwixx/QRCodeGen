@@ -18,10 +18,11 @@
  */
 package qrcodegen.modules.vcardgenpanel.model;
 
-import java.util.EnumSet;
-import java.util.Set;
 import qrcodegen.modules.vcard.Property;
 import qrcodegen.modules.vcard.TypeParameter;
+
+import java.util.EnumSet;
+import java.util.Set;
 
 /**
  *

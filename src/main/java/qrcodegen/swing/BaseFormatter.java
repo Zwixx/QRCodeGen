@@ -18,14 +18,15 @@
  */
 package qrcodegen.swing;
 
-import java.beans.PropertyChangeSupport;
-import java.text.ParseException;
-import javax.swing.JFormattedTextField;
+import qrcodegen.documentfilter.ChainedDocumentFilter;
+
+import javax.swing.*;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultFormatter;
 import javax.swing.text.DocumentFilter;
-import qrcodegen.documentfilter.ChainedDocumentFilter;
+import java.beans.PropertyChangeSupport;
+import java.text.ParseException;
 
 /**
  *

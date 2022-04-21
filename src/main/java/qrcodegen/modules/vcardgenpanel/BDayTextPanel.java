@@ -18,24 +18,22 @@
  */
 package qrcodegen.modules.vcardgenpanel;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.nio.charset.Charset;
-import java.util.ResourceBundle;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-import javax.swing.text.DocumentFilter;
 import qrcodegen.documentfilter.DocumentEncodableFilter;
 import qrcodegen.documentfilter.DocumentSizeFilter;
 import qrcodegen.modules.vcardgenpanel.model.VCardBDayModel;
 import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardBDayPresentationModel;
 import qrcodegen.tools.SwingTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.DocumentFilter;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.nio.charset.Charset;
+import java.util.ResourceBundle;
 
 /**
  *

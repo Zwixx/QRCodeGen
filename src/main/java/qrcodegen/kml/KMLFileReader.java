@@ -18,21 +18,16 @@
  */
 package qrcodegen.kml;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.logging.Logger;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipException;
-import java.util.zip.ZipFile;
-import javax.naming.LimitExceededException;
 import jakarta.xml.bind.DataBindingException;
 import jakarta.xml.bind.JAXB;
 import qrcodegen.io.SizeLimitException;
 import qrcodegen.io.SizeLimitInputStream;
-import qrcodegen.kml.Kml;
+
+import java.io.*;
+import java.util.logging.Logger;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipException;
+import java.util.zip.ZipFile;
 
 /**
  *

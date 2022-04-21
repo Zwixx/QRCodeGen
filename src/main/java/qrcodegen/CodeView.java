@@ -18,22 +18,15 @@
  */
 package qrcodegen;
 
-import java.awt.Component;
-import java.awt.Frame;
-import java.awt.Image;
-import java.awt.Toolkit;
+import qrcodegen.tools.ImmutableDimension;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ResourceBundle;
-import javax.swing.Action;
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.KeyStroke;
-import javax.swing.TransferHandler;
-import qrcodegen.tools.ImmutableDimension;
 
 /**
  *

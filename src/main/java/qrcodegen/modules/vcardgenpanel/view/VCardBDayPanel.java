@@ -18,24 +18,21 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.ResourceBundle;
-import javax.swing.ButtonGroup;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import qrcodegen.modules.vcardgenpanel.BDayDatePanel;
 import qrcodegen.modules.vcardgenpanel.BDayTextPanel;
 import qrcodegen.modules.vcardgenpanel.PropertyProviderViews;
 import qrcodegen.modules.vcardgenpanel.model.DateFormat;
 import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardBDayPresentationModel;
 import qrcodegen.tools.StaticTools;
+
+import javax.swing.*;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ResourceBundle;
 
 /**
  *

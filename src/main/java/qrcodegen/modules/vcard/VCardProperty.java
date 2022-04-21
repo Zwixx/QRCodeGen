@@ -18,11 +18,7 @@
  */
 package qrcodegen.modules.vcard;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Represents an actual VCard property, like a name property (Property.N), an

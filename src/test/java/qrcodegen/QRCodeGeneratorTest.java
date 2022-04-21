@@ -1,36 +1,21 @@
 package qrcodegen;
 
-import qrcodegen.tools.ImmutableDimension;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.ChecksumException;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.FormatException;
-import com.google.zxing.LuminanceSource;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Result;
-import com.google.zxing.WriterException;
+import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.common.StringUtils;
 import com.google.zxing.qrcode.QRCodeReader;
-import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import org.junit.*;
+import qrcodegen.QRCodeGenerator.Modus;
+import qrcodegen.tools.ImmutableDimension;
+import qrcodegen.tools.TriState;
+
 import java.awt.image.BufferedImage;
 import java.nio.charset.Charset;
-import java.util.Arrays;
 import java.util.EnumMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.junit.After;
-import org.junit.AfterClass;
+
 import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import qrcodegen.QRCodeGenerator.Modus;
-import qrcodegen.tools.TriState;
 
 /**
  *
