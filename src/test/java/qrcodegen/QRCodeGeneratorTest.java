@@ -6,6 +6,7 @@ import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.common.StringUtils;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.nimbusds.jose.util.StandardCharset;
 import org.junit.*;
 import qrcodegen.QRCodeGenerator.Modus;
 import qrcodegen.tools.ImmutableDimension;
@@ -13,6 +14,7 @@ import qrcodegen.tools.TriState;
 
 import java.awt.image.BufferedImage;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.EnumMap;
 
 import static org.junit.Assert.*;
@@ -23,7 +25,7 @@ import static org.junit.Assert.*;
  */
 public class QRCodeGeneratorTest {
 
-	private static final Charset DEFAULT_CHARSET = Charset.forName("ISO-8859-1");
+	private static final Charset DEFAULT_CHARSET = StandardCharsets.ISO_8859_1;
 
 	public QRCodeGeneratorTest() {
 	}
@@ -107,7 +109,7 @@ public class QRCodeGeneratorTest {
 
 		System.out.println("generateCodeIso_8859_1Umlaute");
 
-		String content = "WIFI:S:abcdefg;T:WEP;P:äöü;;";
+		String content = "WIFI:S:abcdefg;T:WEP;P:×”×¦ï¢•;;";
 		final Charset charset = Charset.forName("ISO-8859-1");
 		final ErrorCorrectionLevel ecLevel = ErrorCorrectionLevel.L;
 		final BarCodeSize size = BarCodeSize.LARGE;
@@ -133,7 +135,7 @@ public class QRCodeGeneratorTest {
 		assertFalse("StringUtils.guessEncoding(String) changed?", content.equals(result.getText()));
 
 
-		content = "WIFI:S:abcdefg;T:WEP;P:äöüÄ;;";
+		content = "WIFI:S:abcdefg;T:WEP;P:×”×¦ï¢•Ö´;;";
 		doTest(content, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.FIXED_SIZE, 120, 120, 1, TriState.TRUE, TriState.FALSE);
 		doTest(content, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.BEST_FIT, 120, 120, 1, TriState.TRUE, TriState.FALSE);
 		doTest(content, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.MODULE_SIZE, 120, 120, 1, TriState.TRUE, TriState.NOT_APPLICABLE);
@@ -151,7 +153,7 @@ public class QRCodeGeneratorTest {
 
 		System.out.println("generateCodeIso_8859_1Umlaute");
 
-		String content = "WIFI:S:abcdefg;T:WEP;P:äöü;;";
+		String content = "WIFI:S:abcdefg;T:WEP;P:×”×¦ï¢•;;";
 		doTest(content, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.FIXED_SIZE, 350, 350, 1, TriState.TRUE, TriState.FALSE);
 		doTest(content, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.BEST_FIT, 350, 350, 1, TriState.TRUE, TriState.FALSE);
 		doTest(content, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.MODULE_SIZE, 350, 350, 1, TriState.TRUE, TriState.NOT_APPLICABLE);
