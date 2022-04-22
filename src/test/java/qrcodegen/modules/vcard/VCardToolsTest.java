@@ -393,19 +393,19 @@ public class VCardToolsTest {
 	public void testShorten() {
 		System.out.println("testShorten");
 
-		String input = "abcdefghijklmnopqrstuvwxyzäöüßabcdefghijklmnopqrstuvwxyzäöüßabcdefghijklmnopqrstuvwxyzäöüßabcdefghijklmnopqrstuvwxyzäöüßabcdefghijklmnopqrstuvwxyzäöüß";
+		String input = "abcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸabcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸabcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸabcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸabcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸ";
 		int maxLenght = 11;
 		String expResult = "abcdefghijk";
 		String result = VCardTools.shorten(input, maxLenght);
 		assertEquals(expResult, result);
 
 		maxLenght = 79;
-		expResult = "abcdefghijklmnopqrstuvwxyzäöüßabcdef [...] yzäöüßabcdefghijklmnopqrstuvwxyzäöüß";
+		expResult = "abcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸabcdef [...] yzÃ¤Ã¶Ã¼ÃŸabcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸ";
 		result = VCardTools.shorten(input, maxLenght);
 		assertEquals(expResult, result);
 
 		maxLenght = 80;
-		expResult = "abcdefghijklmnopqrstuvwxyzäöüßabcdef [...] xyzäöüßabcdefghijklmnopqrstuvwxyzäöüß";
+		expResult = "abcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸabcdef [...] xyzÃ¤Ã¶Ã¼ÃŸabcdefghijklmnopqrstuvwxyzÃ¤Ã¶Ã¼ÃŸ";
 		result = VCardTools.shorten(input, maxLenght);
 		assertEquals(expResult, result);
 	}

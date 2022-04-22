@@ -426,7 +426,7 @@ public class VCardFilterTest {
 		cardFilter.setFilter(Filter.PHOTO);
 		cardFilter.setCard(card);
 		cardFilter.processCard();
-		assertEquals(readFile(getFileForName("files/vcard_photo_expected.vcf"), ISO_8859_1), cardFilter.getFilteredResult());
+		assertEquals(readFile(getFileForName("vcard_photo_expected.vcf"), ISO_8859_1), cardFilter.getFilteredResult());
 	}
 	
 	@Test
@@ -529,7 +529,7 @@ public class VCardFilterTest {
 
 	private static File getFileForName(String name) {
 		try {
-			return new File(FilterTest.class.getResource("files/" + name).toURI());
+			return new File(FilterTest.class.getResource(name).toURI());
 		} catch (URISyntaxException use) {
 			throw new IllegalArgumentException(use);
 		}
