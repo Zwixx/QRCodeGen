@@ -20,7 +20,7 @@ package qrcodegen.kml;
 
 import org.junit.*;
 
-import javax.xml.bind.JAXB;
+import jakarta.xml.bind.JAXB;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
