@@ -33,10 +33,10 @@ public final class ArcDegree implements qrcodegen.math.Degree, Comparable<ArcDeg
 
 	public ArcDegree(int degree, int minute, double second) {
 		if (minute < 0) {
-			throw new IllegalArgumentException(Integer.toString(minute) + " < 0");
+			throw new IllegalArgumentException(minute + " < 0");
 		}
 		if (second < 0) {
-			throw new IllegalArgumentException(Double.toString(second) + " < 0");
+			throw new IllegalArgumentException(second + " < 0");
 		}
 		this.degree = degree;
 		this.minute = minute;
@@ -96,17 +96,17 @@ public final class ArcDegree implements qrcodegen.math.Degree, Comparable<ArcDeg
 
 	@Override
 	public boolean equals(Object other) {
-		if (!(other instanceof ArcDegree)) {
+		if (!(other instanceof ArcDegree otherDegree)) {
 			return false;
+		} else {
+			if (this.degree != otherDegree.degree) {
+				return false;
+			}
+			if (this.minute != otherDegree.minute) {
+				return false;
+			}
+			return Double.compare(this.decimalSecond, otherDegree.decimalSecond) == 0;
 		}
-		ArcDegree otherDegree = (ArcDegree) other;
-		if (this.degree != otherDegree.degree) {
-			return false;
-		}
-		if (this.minute != otherDegree.minute) {
-			return false;
-		}
-		return Double.compare(this.decimalSecond, otherDegree.decimalSecond) == 0;
 	}
 
 	@Override
@@ -121,14 +121,14 @@ public final class ArcDegree implements qrcodegen.math.Degree, Comparable<ArcDeg
 
 	@Override
 	public String toString() {
-		String dms = String.format("%1$d° %2$d' %3$s''", getDegree(), getMinute(), Double.toString(getDecimalSecond()));
+		String dms = String.format("%1$d° %2$d' %3$s''", getDegree(), getMinute(), getDecimalSecond());
 		return Double.toString(getValue()).concat(" == ").concat(dms);
 	}
 
 	@Override
 	public boolean greaterThan(Degree other) {
-		if (other instanceof ArcDegree) {
-			return this.compareTo((ArcDegree) other) > 0;
+		if (other instanceof ArcDegree otherDegree) {
+			return this.compareTo(otherDegree) > 0;
 		} else {
 			return Double.compare(getValue(), other.getValue()) > 0;
 		}
@@ -136,8 +136,8 @@ public final class ArcDegree implements qrcodegen.math.Degree, Comparable<ArcDeg
 
 	@Override
 	public boolean greaterThanOrEqualTo(Degree other) {
-		if (other instanceof ArcDegree) {
-			return this.compareTo((ArcDegree) other) >= 0;
+		if (other instanceof ArcDegree otherDegree) {
+			return this.compareTo(otherDegree) >= 0;
 		} else {
 			return Double.compare(getValue(), other.getValue()) >= 0;
 		}
@@ -145,8 +145,8 @@ public final class ArcDegree implements qrcodegen.math.Degree, Comparable<ArcDeg
 
 	@Override
 	public boolean lessThan(Degree other) {
-		if (other instanceof ArcDegree) {
-			return this.compareTo((ArcDegree) other) < 0;
+		if (other instanceof ArcDegree otherDegree) {
+			return this.compareTo(otherDegree) < 0;
 		} else {
 			return Double.compare(getValue(), other.getValue()) < 0;
 		}
@@ -154,8 +154,8 @@ public final class ArcDegree implements qrcodegen.math.Degree, Comparable<ArcDeg
 
 	@Override
 	public boolean lessThanOrEqualTo(Degree other) {
-		if (other instanceof ArcDegree) {
-			return this.compareTo((ArcDegree) other) <= 0;
+		if (other instanceof ArcDegree otherDegree) {
+			return this.compareTo(otherDegree) <= 0;
 		} else {
 			return Double.compare(getValue(), other.getValue()) <= 0;
 		}
@@ -163,8 +163,8 @@ public final class ArcDegree implements qrcodegen.math.Degree, Comparable<ArcDeg
 
 	@Override
 	public boolean equalTo(Degree other) {
-		if (other instanceof ArcDegree) {
-			return this.compareTo((ArcDegree) other) == 0;
+		if (other instanceof ArcDegree otherDegree) {
+			return this.compareTo(otherDegree) == 0;
 		} else {
 			return Double.compare(getValue(), other.getValue()) == 0;
 		}

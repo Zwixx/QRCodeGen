@@ -55,7 +55,7 @@ public abstract class AbstractOneSourcePanel extends javax.swing.JPanel implemen
 	 * characters that can be entered into the sourceField.
 	 *
 	 */
-	public AbstractOneSourcePanel() {
+	protected AbstractOneSourcePanel() {
 		initComponents();
 		initSourceField(-1);
 		initGenerateButton();
@@ -68,7 +68,7 @@ public abstract class AbstractOneSourcePanel extends javax.swing.JPanel implemen
 	 * @param maxChars the maximum the number of characters that can be entered
 	 * into the sourceField
 	 */
-	public AbstractOneSourcePanel(int maxChars) {
+	protected AbstractOneSourcePanel(int maxChars) {
 		if (maxChars < -1) {
 			throw new IllegalArgumentException("maxChars must be >= -1, but is: "
 					+ maxChars);

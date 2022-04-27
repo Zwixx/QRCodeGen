@@ -247,18 +247,6 @@ public abstract class AbstractGroupFormatter extends BaseFormatter {
 		return navigatable;
 	}
 
-	private boolean isNavigatable(int offset, int direction, Position.Bias bias) {
-		boolean navigatable;
-		if (direction == SwingConstants.EAST) {
-			navigatable = offset % (groupSize + 1) != 0;
-		} else if (direction == SwingConstants.WEST) {
-			navigatable = groupSize - (offset % (groupSize + 1)) != 0;
-		} else {
-			navigatable = true;
-		}
-		return navigatable;
-	}
-
 	abstract String format(String input, int globalOffset);
 
 	private class DefaultNavigationFilter extends NavigationFilter {

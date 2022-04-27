@@ -22,7 +22,7 @@ public abstract class AbstractModel {
 	/**
 	 * Default constructor. Instantiates the PropertyChangeSupport class.
 	 */
-	public AbstractModel() {
+	protected AbstractModel() {
 		propertyChangeSupport = new PropertyChangeSupport(this);
 	}
 

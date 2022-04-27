@@ -161,13 +161,13 @@ public final class AdrProperty extends PropertyEntry {
 
 	public static final class Builder extends Builder2 {
 
-		private final List<String> poBox = new ArrayList<String>();
-		private final List<String> extAddress = new ArrayList<String>();
-		private final List<String> street = new ArrayList<String>();
-		private final List<String> locality = new ArrayList<String>();
-		private final List<String> region = new ArrayList<String>();
-		private final List<String> code = new ArrayList<String>();
-		private final List<String> country = new ArrayList<String>();
+		private final List<String> poBox = new ArrayList<>();
+		private final List<String> extAddress = new ArrayList<>();
+		private final List<String> street = new ArrayList<>();
+		private final List<String> locality = new ArrayList<>();
+		private final List<String> region = new ArrayList<>();
+		private final List<String> code = new ArrayList<>();
+		private final List<String> country = new ArrayList<>();
 		private String label;
 
 		public static Builder newInstance() {

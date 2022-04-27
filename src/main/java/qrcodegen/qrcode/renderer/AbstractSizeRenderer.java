@@ -43,11 +43,11 @@ public abstract class AbstractSizeRenderer extends AbstractRenderer {
 	 * after resetState() */
 	private TriState exceedsRequestedDimension = TriState.NOT_APPLICABLE;
 
-	public AbstractSizeRenderer(ImmutableDimension sizeLimit) {
+	protected AbstractSizeRenderer(ImmutableDimension sizeLimit) {
 		super(sizeLimit);
 	}
 
-	public AbstractSizeRenderer() {
+	protected AbstractSizeRenderer() {
 		super();
 	}
 
@@ -93,8 +93,6 @@ public abstract class AbstractSizeRenderer extends AbstractRenderer {
 		// dimensions. For example, if input is 25x25 the QR will be 33x33 including the quiet zone.
 		// If the requested size is 200x160, the multiple will be 4, for a QR of 132x132. These will
 		// handle all the padding from 100x100 (the actual QR) up to 200x160.
-		//int leftPadding = usePadding ? (suggestedOutputWidth - (inputWidth * multiple)) / 2 :  QUIET_ZONE_SIZE * multiple;
-		//int topPadding = usePadding ? (suggestedOutputHeight - (inputHeight * multiple)) / 2 : QUIET_ZONE_SIZE * multiple;
 		int leftPadding = (actualDimension.getWidth() - (inputWidth * multiple)) / 2;
 		int topPadding = (actualDimension.getHeight() - (inputHeight * multiple)) / 2;
 

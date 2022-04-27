@@ -33,7 +33,7 @@ public abstract class AbstractRenderer implements Renderable {
 	private final ImmutableDimension maxImageDimension;
 	final PropertyChangeSupport pcs;
 
-	public AbstractRenderer(ImmutableDimension sizeLimit) {
+	protected AbstractRenderer(ImmutableDimension sizeLimit) {
 		if (sizeLimit == null) {
 			throw new NullPointerException();
 		}
@@ -41,7 +41,7 @@ public abstract class AbstractRenderer implements Renderable {
 		this.maxImageDimension = sizeLimit;
 	}
 
-	public AbstractRenderer() {
+	protected AbstractRenderer() {
 		this(new ImmutableDimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
 	}
 
