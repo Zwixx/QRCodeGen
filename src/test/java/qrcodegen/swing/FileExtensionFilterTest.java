@@ -18,12 +18,14 @@
  */
 package qrcodegen.swing;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.io.File;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 /**
  *
@@ -34,19 +36,19 @@ public class FileExtensionFilterTest {
 	public FileExtensionFilterTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

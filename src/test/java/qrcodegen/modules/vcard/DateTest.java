@@ -18,9 +18,11 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  *
@@ -47,19 +49,19 @@ public class DateTest {
 	public DateTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 
@@ -78,12 +80,14 @@ public class DateTest {
 		check(monthDay, monthDayResult);
 	}
 
-	@Test(expected=IllegalArgumentException.class)
+	@Test()
 	public void testGetValueAsStringYearZero() {
-		System.out.println("getValueAsStringYearZero");
-		// TODO VCard date allows year zero, but not the Calendar we use
-		// to check it (there is only 1 BC and AD 1, but no year 0)
-		check(year_zero, year_zeroResult);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			System.out.println("getValueAsStringYearZero");
+			// TODO VCard date allows year zero, but not the Calendar we use
+			// to check it (there is only 1 BC and AD 1, but no year 0)
+			check(year_zero, year_zeroResult);
+		});
 	}
 
 	private static void check(int[][] data, String[] dataResult) {
@@ -97,31 +101,13 @@ public class DateTest {
 
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test()
 	public void testConstructor() {
-		System.out.println("constructor");
-		for (int[] i : illegalData) {
-			Date instance = new Date(i[0], i[1], i[2]);
-		}
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			System.out.println("constructor");
+			for (int[] i : illegalData) {
+				Date instance = new Date(i[0], i[1], i[2]);
+			}
+		});
 	}
-
-	/**
-	 * Test of elements method, of class Date.
-	 */
-
-
-	/**
-	 * Test of getYear method, of class Date.
-	 */
-
-
-	/**
-	 * Test of getMonth method, of class Date.
-	 */
-
-
-	/**
-	 * Test of getDay method, of class Date.
-	 */
-
 }

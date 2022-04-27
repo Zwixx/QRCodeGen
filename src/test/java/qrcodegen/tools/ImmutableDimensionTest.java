@@ -18,7 +18,8 @@
  */
 package qrcodegen.tools;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 /**
  *
@@ -29,19 +30,19 @@ public class ImmutableDimensionTest {
 	public ImmutableDimensionTest() {
 	}
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 	
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 	
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 	
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

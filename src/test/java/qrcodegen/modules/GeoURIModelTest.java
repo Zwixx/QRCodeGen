@@ -19,12 +19,14 @@
 
 package qrcodegen.modules;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.math.PreciseDecimalArcDegree;
 import qrcodegen.uri.GeoURI;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 /**
  *
@@ -37,20 +39,20 @@ public class GeoURIModelTest {
     public GeoURIModelTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
 		model = new GeoURIModel();
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 

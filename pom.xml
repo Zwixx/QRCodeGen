@@ -13,6 +13,11 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M6</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
@@ -60,7 +65,9 @@
                         </goals>
                         <configuration>
                             <executable>jpackage</executable>
-                            <commandlineArgs>--input target/ --name qrcodegen --main-jar qrcodegen-jar-with-dependencies.jar --dest target/ --type msi</commandlineArgs>
+                            <commandlineArgs>--input target/ --name qrcodegen --main-jar
+                                qrcodegen-jar-with-dependencies.jar --dest target/ --type msi
+                            </commandlineArgs>
                         </configuration>
                     </execution>
                 </executions>
@@ -96,9 +103,15 @@
             <version>3.0.2</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -113,5 +126,6 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.jupiter.version>5.8.1</junit.jupiter.version>
     </properties>
 </project>

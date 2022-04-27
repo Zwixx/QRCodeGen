@@ -4,11 +4,13 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.Property;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 /**
  *
@@ -23,20 +25,20 @@ public class TelPropertyParserTest {
 	public TelPropertyParserTest() {
 	}
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 	
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 	
-	@Before
+	@BeforeEach
 	public void setUp() {
 		parser = new TelPropertyParser();
 	}
 	
-	@After
+	@AfterEach
 	public void tearDown() {
 		parser = null;
 	}

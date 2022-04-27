@@ -18,13 +18,15 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  *
@@ -43,15 +45,15 @@ public class OrgPropertyTest {
 	public OrgPropertyTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 
 		OrgProperty.Builder orgBuilder = new OrgProperty.Builder(VALID_ORGANIZATION_NAME_1);
@@ -63,7 +65,7 @@ public class OrgPropertyTest {
 
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		validOrgProperty1 = null;
 		emptyOrgProperty = null;
@@ -194,19 +196,23 @@ public class OrgPropertyTest {
 		}
 	}
 
-	@Test(expected = IllegalStateException.class)
+	@Test()
 	public void testGetUnitNameIllegalStateException() {
-		System.out.println("getUnitNameIllegalStateException");
+		Assertions.assertThrows(IllegalStateException.class, () -> {
+			System.out.println("getUnitNameIllegalStateException");
 
 
-		String result = emptyOrgProperty.getUnitName(1);
+			String result = emptyOrgProperty.getUnitName(1);
+		});
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test()
 	public void testGetUnitNameException() {
-		System.out.println("getUnitNameException");
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			System.out.println("getUnitNameException");
 
 
-		String result = validOrgProperty1.getUnitName(3);
+			String result = validOrgProperty1.getUnitName(3);
+		});
 	}
 }

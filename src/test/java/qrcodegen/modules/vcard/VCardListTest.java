@@ -4,11 +4,13 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  *
@@ -21,20 +23,20 @@ public class VCardListTest {
 	public VCardListTest() {
 	}
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 	
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 	
-	@Before
+	@BeforeEach
 	public void setUp() {
 		list = new VCardComponentList<VCardValue>(new ArrayList<VCardValue>());
 	}
 	
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

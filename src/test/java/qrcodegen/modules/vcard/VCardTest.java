@@ -4,7 +4,8 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,19 +19,19 @@ public class VCardTest {
 	public VCardTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

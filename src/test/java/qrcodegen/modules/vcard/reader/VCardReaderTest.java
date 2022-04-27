@@ -18,7 +18,8 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.*;
 
 import java.io.File;
@@ -29,7 +30,8 @@ import java.nio.charset.Charset;
 import java.util.EnumSet;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -45,19 +47,19 @@ public class VCardReaderTest {
 		path = new File(VCardReaderTest.class.getResource("files").toURI());
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		reader = null;
 	}

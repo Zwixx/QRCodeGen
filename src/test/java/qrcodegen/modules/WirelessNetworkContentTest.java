@@ -18,9 +18,10 @@
  */
 package qrcodegen.modules;
 
-import org.junit.*;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  *
@@ -33,20 +34,20 @@ public class WirelessNetworkContentTest {
 	public WirelessNetworkContentTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		model = new WirelessNetworkContent();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		model = null;
 	}

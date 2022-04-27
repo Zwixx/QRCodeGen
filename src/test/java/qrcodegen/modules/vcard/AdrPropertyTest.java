@@ -18,11 +18,13 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.util.Comparator;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -35,19 +37,19 @@ public class AdrPropertyTest {
 	public AdrPropertyTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

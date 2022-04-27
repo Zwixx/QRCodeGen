@@ -18,7 +18,8 @@
  */
 package qrcodegen.modules.vcardgenpanel.view;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.ContentModule;
 import qrcodegen.modules.vcardgenpanel.model.VCardModel;
 import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardPresentationModel;
@@ -26,8 +27,8 @@ import qrcodegen.modules.vcardgenpanel.presentationmodel.VCardPresentationModel;
 import java.awt.print.Printable;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  *
@@ -40,20 +41,20 @@ public class VCardViewTest {
 	public VCardViewTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		view = VCardView.newInstance(new VCardPresentationModel(new VCardModel()));
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		view = null;
 	}

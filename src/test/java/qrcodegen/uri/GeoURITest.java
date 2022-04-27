@@ -18,14 +18,17 @@
  */
 package qrcodegen.uri;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.math.ArcDegree;
 import qrcodegen.math.DecimalArcDegree;
 import qrcodegen.math.Degree;
 import qrcodegen.math.PreciseDecimalArcDegree;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -42,15 +45,15 @@ public class GeoURITest {
 	public GeoURITest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		googleNewYork = new GeoURI(new DecimalArcDegree(40.71872), new DecimalArcDegree(-73.98905), 100);
 		northPoleGround = new GeoURI(new DecimalArcDegree(90.0), new DecimalArcDegree(-73.98905));
@@ -59,7 +62,7 @@ public class GeoURITest {
 		southPole = new GeoURI(new DecimalArcDegree(-90.0), new DecimalArcDegree(-73.98905), 100);
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		googleNewYork = null;
 		northPoleGround = null;
@@ -68,32 +71,40 @@ public class GeoURITest {
 		southPole = null;
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void creationShouldFailIfLatitudeLowerNegative90Degrees() {
-		Degree lat = new ArcDegree(-91, 0, 0.0);
-		Degree longit = new ArcDegree(0, 0, 0.0);
-		new GeoURI(lat, longit);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			Degree lat = new ArcDegree(-91, 0, 0.0);
+			Degree longit = new ArcDegree(0, 0, 0.0);
+			new GeoURI(lat, longit);
+		});
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void creationShouldFailIfLatitudeHigher90Degrees() {
-		Degree lat = new ArcDegree(91, 0, 0.0);
-		Degree longit = new ArcDegree(0, 0, 0.0);
-		new GeoURI(lat, longit);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			Degree lat = new ArcDegree(91, 0, 0.0);
+			Degree longit = new ArcDegree(0, 0, 0.0);
+			new GeoURI(lat, longit);
+		});
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void creationShouldFailIfLongitudeLowerNegative180Degrees() {
-		Degree lat = new ArcDegree(-181, 0, 0.0);
-		Degree longit = new ArcDegree(0, 0, 0.0);
-		new GeoURI(lat, longit);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			Degree lat = new ArcDegree(-181, 0, 0.0);
+			Degree longit = new ArcDegree(0, 0, 0.0);
+			new GeoURI(lat, longit);
+		});
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void creationShouldFailIfLongitudeHigher180Degrees() {
-		Degree lat = new ArcDegree(181, 0, 0.0);
-		Degree longit = new ArcDegree(0, 0, 0.0);
-		new GeoURI(lat, longit);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			Degree lat = new ArcDegree(181, 0, 0.0);
+			Degree longit = new ArcDegree(0, 0, 0.0);
+			new GeoURI(lat, longit);
+		});
 	}
 
 	@Test

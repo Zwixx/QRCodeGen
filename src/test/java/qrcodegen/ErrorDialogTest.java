@@ -18,11 +18,11 @@
  */
 package qrcodegen;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 import qrcodegen.ErrorDialog.MessageType;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  *
@@ -33,19 +33,19 @@ public class ErrorDialogTest {
 	public ErrorDialogTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

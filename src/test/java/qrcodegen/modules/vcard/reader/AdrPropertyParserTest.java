@@ -18,11 +18,13 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.AdrProperty;
 import qrcodegen.modules.vcard.Property;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -40,20 +42,20 @@ public class AdrPropertyParserTest {
 	public AdrPropertyParserTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		parser = new AdrPropertyParser();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		parser = null;
 	}

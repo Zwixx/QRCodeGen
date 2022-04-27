@@ -4,7 +4,8 @@
  */
 package qrcodegen.modules;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.io.*;
 import java.net.URISyntaxException;
@@ -13,7 +14,8 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -28,20 +30,20 @@ public class VCardFilterTest {
 	public VCardFilterTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		cardFilter = new VCardFilter();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		cardFilter = null;
 	}
@@ -67,13 +69,15 @@ public class VCardFilterTest {
 		assertFalse(cardFilter.hasFilteredResult());
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void testSetCardNullArgument() {
-		System.out.println("setCardNullArgument");
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			System.out.println("setCardNullArgument");
 
-		assertFalse(cardFilter.isCardSet());
-		String card = null;
-		cardFilter.setCard(card);
+			assertFalse(cardFilter.isCardSet());
+			String card = null;
+			cardFilter.setCard(card);
+		});
 	}
 
 	/**
@@ -92,12 +96,14 @@ public class VCardFilterTest {
 		assertEquals(card, cardFilter.getCard());
 	}
 
-	@Test(expected = IllegalStateException.class)
+	@Test
 	public void testGetCardNoCardSet() {
-		System.out.println("setCardNoCardSet");
+		Assertions.assertThrows(IllegalStateException.class, () -> {
+			System.out.println("setCardNoCardSet");
 
-		assertFalse(cardFilter.isCardSet());
-		cardFilter.getCard();
+			assertFalse(cardFilter.isCardSet());
+			cardFilter.getCard();
+		});
 	}
 
 	@Test
@@ -326,12 +332,14 @@ public class VCardFilterTest {
 	/**
 	 * Test of removeFilter method, of class VCardFilter.
 	 */
-	@Test (expected = IllegalArgumentException.class)
+	@Test
 	public void testRemoveFilterNotSet() {
-		System.out.println("removeFilterNotSet");
-		
-		cardFilter.setFilter(Filter.PHOTO);
-		cardFilter.removeFilter(Filter.EMPTY_LINES);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			System.out.println("removeFilterNotSet");
+
+			cardFilter.setFilter(Filter.PHOTO);
+			cardFilter.removeFilter(Filter.EMPTY_LINES);
+		});
 	}
 	/**
 	 * Test of isFilterSet method, of class VCardFilter.
@@ -357,11 +365,13 @@ public class VCardFilterTest {
 	/**
 	 * Test of processCard method, of class VCardFilter.
 	 */
-	@Test (expected = IllegalStateException.class)
+	@Test
 	public void testProcessCardNoCardSet() {
-		System.out.println("processCardNoCardSet");
-		
-		cardFilter.processCard();
+		Assertions.assertThrows(IllegalStateException.class, () -> {
+			System.out.println("processCardNoCardSet");
+
+			cardFilter.processCard();
+		});
 	}
 
 	/**
@@ -381,25 +391,29 @@ public class VCardFilterTest {
 	/**
 	 * Test of getFilteredResult method, of class VCardFilter.
 	 */
-	@Test (expected = IllegalStateException.class)
+	@Test ()
 	public void testGetFilteredResultNoResult() {
-		System.out.println("getFilteredResultNoResult");
-		
-		cardFilter.getFilteredResult(); // throws IllegalStateException
+		Assertions.assertThrows(IllegalStateException.class, () -> {
+			System.out.println("getFilteredResultNoResult");
+
+			cardFilter.getFilteredResult(); // throws IllegalStateException
+		});
 	}
 
 	/**
 	 * Test of getFilteredResult method, of class VCardFilter.
 	 */
-	@Test (expected = IllegalStateException.class)
+	@Test ()
 	public void testGetFilteredResultNoResultAfterSetCard() {
-		System.out.println("getFilteredResultNoResult");
-		
-		cardFilter.setCard("test");
-		cardFilter.processCard();
-		assertEquals("test", cardFilter.getFilteredResult());
-		cardFilter.setCard("new input");
-		cardFilter.getFilteredResult();// throws IllegalStateException
+		Assertions.assertThrows(IllegalStateException.class, () -> {
+			System.out.println("getFilteredResultNoResult");
+
+			cardFilter.setCard("test");
+			cardFilter.processCard();
+			assertEquals("test", cardFilter.getFilteredResult());
+			cardFilter.setCard("new input");
+			cardFilter.getFilteredResult();// throws IllegalStateException
+		});
 	}
 
 	/**

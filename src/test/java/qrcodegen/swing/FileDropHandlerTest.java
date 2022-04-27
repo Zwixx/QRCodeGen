@@ -18,7 +18,8 @@
  */
 package qrcodegen.swing;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -28,7 +29,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 /**
  *
@@ -41,34 +43,38 @@ public class FileDropHandlerTest {
 	public FileDropHandlerTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		ff = Arrays.asList(new FileNameExtensionFilter("Text", "txt"),
 				new FileNameExtensionFilter("Document", "doc"));
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		ff = null;
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void constructorShouldThrowExceptionIfListOfFileFilterContainsNull() {
-		List<FileNameExtensionFilter> ff = Arrays.asList(new FileNameExtensionFilter("test", "txt"), null);
-		new FileDropHandler(ff, Logger.getAnonymousLogger());
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			List<FileNameExtensionFilter> ff = Arrays.asList(new FileNameExtensionFilter("test", "txt"), null);
+			new FileDropHandler(ff, Logger.getAnonymousLogger());
+		});
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void constructorShouldThrowExceptionIfFileFilterIsNull() {
-		new FileDropHandler((FileFilter) null, Logger.getAnonymousLogger());
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			new FileDropHandler((FileFilter) null, Logger.getAnonymousLogger());
+		});
 	}
 
 	@Test

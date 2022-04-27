@@ -4,10 +4,12 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.Property;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -25,20 +27,20 @@ public class FnPropertyParserTest {
 	public FnPropertyParserTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		parser = new FnPropertyParser();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		parser = null;
 	}
@@ -58,12 +60,14 @@ public class FnPropertyParserTest {
 		assertTrue(parser.isValid());
 	}
 
-	@Test(expected = IllegalStateException.class)
+	@Test()
 	public void testParseIllegalState() {
-		System.out.println("parseIllegalState");
-		parser.reset(null, null);
-		parser.parse();
-		parser.parse();
+		Assertions.assertThrows(IllegalStateException.class, () -> {
+			System.out.println("parseIllegalState");
+			parser.reset(null, null);
+			parser.parse();
+			parser.parse();
+		});
 	}
 
 	@Test

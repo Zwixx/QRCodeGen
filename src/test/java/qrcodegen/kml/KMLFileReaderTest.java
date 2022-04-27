@@ -18,7 +18,7 @@
  */
 package qrcodegen.kml;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,7 +27,7 @@ import java.net.URISyntaxException;
 import java.util.logging.Logger;
 import java.util.zip.ZipException;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  *
@@ -42,19 +42,19 @@ public class KMLFileReaderTest {
 		path = new File(KMLFileReaderTest.class.getResource("testFiles").toURI());
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 
@@ -68,12 +68,14 @@ public class KMLFileReaderTest {
 		assertNotNull(kml);
 	}
 
-	@Test(expected = ZipException.class)
+	@Test()
 	public void readZippedFileShouldThrowZipExceptionOnUncompressedFile() throws ZipException, FileNotFoundException, IOException {
-		File input = new File(path, "doc.kml");
-		KMLFileReader reader = new KMLFileReader(input, 1024 * 1024, logger);
+		Assertions.assertThrows(ZipException.class, () -> {
+			File input = new File(path, "doc.kml");
+			KMLFileReader reader = new KMLFileReader(input, 1024 * 1024, logger);
 
-		reader.readZippedFile();
+			reader.readZippedFile();
+		});
 	}
 
 	@Test
@@ -86,12 +88,14 @@ public class KMLFileReaderTest {
 		assertNotNull(kml);
 	}
 
-	@Test(expected = IOException.class)
+	@Test()
 	public void readUncompressedFileShouldThrowIOExceptionOnZippedFile() throws FileNotFoundException, IOException {
+		Assertions.assertThrows(IOException.class, () -> {
 		File input = new File(path, "Google.kmz");
 		KMLFileReader reader = new KMLFileReader(input, 1024 * 1024, logger);
 
 		reader.readUncompressedFile();
+		});
 	}
 
 	@Test
@@ -114,8 +118,10 @@ public class KMLFileReaderTest {
 		assertNotNull(kml);
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test()
 	public void constructorShouldThrowNPEifFileIsNull() {
-		new KMLFileReader(null, 0, logger);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			new KMLFileReader(null, 0, logger);
+		});
 	}
 }

@@ -4,11 +4,13 @@
  */
 package qrcodegen.modules.vcardgenpanel;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.AdrProperty;
 import qrcodegen.modules.vcardgenpanel.model.VCardAddressModel;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -21,20 +23,20 @@ public class VCardAddressModelTest {
 	public VCardAddressModelTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		instance = new VCardAddressModel();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		instance = null;
 	}

@@ -19,11 +19,11 @@
 
 package qrcodegen.kml;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  *
@@ -34,19 +34,19 @@ public class CoordinatesTest {
     public CoordinatesTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -68,15 +68,19 @@ public class CoordinatesTest {
 		assertFalse(c.isAltitudeDefined());
 	}
 	
-	@Test(expected = IllegalArgumentException.class)
+	@Test()
 	public void shouldThrowExceptionIfLessThanTwoComponents(){
-		String input = "-73.98905";
-		new Coordinates(input);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			String input = "-73.98905";
+			new Coordinates(input);
+		});
 	}
 	
-	@Test(expected = IllegalArgumentException.class)
+	@Test()
 	public void shouldThrowExceptionIfMoreThanThreeComponents(){
-		String input = "-73.98905,40.71872,100,95";
-		new Coordinates(input);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			String input = "-73.98905,40.71872,100,95";
+			new Coordinates(input);
+		});
 	}
 }

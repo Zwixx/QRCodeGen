@@ -4,11 +4,13 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.BDayProperty;
 import qrcodegen.modules.vcard.Property;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -36,22 +38,22 @@ public class BDayPropertyParserTest {
 	public BDayPropertyParserTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		parser = new BDayPropertyParser();
 		gregorian_date = new String[]{";VALUE=date-and-or-time;CALSCALE=gregorian", "20111113"};
 		julian_date = new String[]{";VALUE=date-and-or-time;CALSCALE=julian", "20111113"};
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		parser = null;
 		gregorian_date = null;

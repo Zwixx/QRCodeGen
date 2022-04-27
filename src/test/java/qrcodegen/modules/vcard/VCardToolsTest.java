@@ -18,7 +18,8 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.VCardTools.CharSubset;
 
 import java.nio.charset.CharacterCodingException;
@@ -28,7 +29,10 @@ import java.util.Collection;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
+
 
 /**
  *
@@ -42,19 +46,19 @@ public class VCardToolsTest {
 	public VCardToolsTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 
@@ -76,10 +80,12 @@ public class VCardToolsTest {
 		}
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void testEscapeComponentNullInput() {
-		System.out.println("escapeComponentNullInput");
-		VCardTools.escapeComponent(null);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			System.out.println("escapeComponentNullInput");
+			VCardTools.escapeComponent(null);
+		});
 	}
 
 	@Test
@@ -193,29 +199,35 @@ public class VCardToolsTest {
 		assertEquals(expectedResult, result);
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test()
 	public void testFoldContentWrongLimit() throws CharacterCodingException {
-		System.out.println("foldContentWrongLimit");
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			System.out.println("foldContentWrongLimit");
 
-		String input = "ABC";
+			String input = "ABC";
 
-		String result = VCardTools.foldContent(utf_8, input, (int) utf_8.newDecoder().maxCharsPerByte() - 1);
+			String result = VCardTools.foldContent(utf_8, input, (int) utf_8.newDecoder().maxCharsPerByte() - 1);
+		});
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test()
 	public void testFoldContentNullInput() throws CharacterCodingException {
-		System.out.println("foldContentNullInput");
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			System.out.println("foldContentNullInput");
 
-		String result = VCardTools.foldContent(utf_8, null, 75);
+			String result = VCardTools.foldContent(utf_8, null, 75);
+		});
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test()
 	public void testFoldContentNullCharset() throws CharacterCodingException {
-		System.out.println("foldContentNullCharset");
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			System.out.println("foldContentNullCharset");
 
-		String input = "ABC";
+			String input = "ABC";
 
-		String result = VCardTools.foldContent(null, input, 75);
+			String result = VCardTools.foldContent(null, input, 75);
+		});
 	}
 
 	@Test
@@ -354,14 +366,16 @@ public class VCardToolsTest {
 		assertEquals(expectedResult, result);
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test()
 	public void testCharSubsetCTNullInput() {
-		System.out.println("charSubsetCTNullInput");
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			System.out.println("charSubsetCTNullInput");
 
-		String input = null;
-		VCardTools.CharSubsetCT expectedResult = VCardTools.CharSubsetCT.COMPONENT;
-		VCardTools.CharSubsetCT result = VCardTools.CharSubsetCT.getSubset(input);
-		assert false;
+			String input = null;
+			VCardTools.CharSubsetCT expectedResult = VCardTools.CharSubsetCT.COMPONENT;
+			VCardTools.CharSubsetCT result = VCardTools.CharSubsetCT.getSubset(input);
+			assert false;
+		});
 	}
 
 	@Test

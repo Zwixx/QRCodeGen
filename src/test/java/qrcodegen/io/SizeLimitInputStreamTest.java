@@ -18,7 +18,7 @@
  */
 package qrcodegen.io;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -26,7 +26,7 @@ import java.io.InputStream;
 import java.nio.charset.Charset;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  *
@@ -40,31 +40,33 @@ public class SizeLimitInputStreamTest {
 	public SizeLimitInputStreamTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 
-	@Test(expected = SizeLimitException.class)
+	@Test()
 	public void shouldThrowExceptionAfterReadingOneByteIfLimitIsZeroByte() throws IOException {
-		InputStream in = new SizeLimitInputStream(new ByteArrayInputStream(LENGTH_10_BYTE.getBytes(UTF_8)), 0);
-		while (true) {
-			int value = in.read();
-			if (value == -1) {
-				break;
+		Assertions.assertThrows(SizeLimitException.class, () -> {
+			InputStream in = new SizeLimitInputStream(new ByteArrayInputStream(LENGTH_10_BYTE.getBytes(UTF_8)), 0);
+			while (true) {
+				int value = in.read();
+				if (value == -1) {
+					break;
+				}
 			}
-		}
+		});
 	}
 
 	@Test
@@ -78,15 +80,17 @@ public class SizeLimitInputStreamTest {
 		}
 	}
 
-	@Test(expected = SizeLimitException.class)
+	@Test()
 	public void shouldThrowExceptionIfLimitExceedsInputLength() throws IOException {
-		InputStream in = new SizeLimitInputStream(new ByteArrayInputStream(LENGTH_10_BYTE.getBytes(UTF_8)), 9L);
-		while (true) {
-			int value = in.read();
-			if (value == -1) {
-				break;
+		Assertions.assertThrows(SizeLimitException.class, () -> {
+			InputStream in = new SizeLimitInputStream(new ByteArrayInputStream(LENGTH_10_BYTE.getBytes(UTF_8)), 9L);
+			while (true) {
+				int value = in.read();
+				if (value == -1) {
+					break;
+				}
 			}
-		}
+		});
 	}
 
 	@Test
@@ -103,8 +107,10 @@ public class SizeLimitInputStreamTest {
 		assertThat(actual, equalTo(expected));
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test()
 	public void shouldThrowIllegalArgumentExceptionIfLimitIsLessThanZero() {
-		InputStream in = new SizeLimitInputStream(new ByteArrayInputStream(LENGTH_10_BYTE.getBytes(UTF_8)), -1);
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			InputStream in = new SizeLimitInputStream(new ByteArrayInputStream(LENGTH_10_BYTE.getBytes(UTF_8)), -1);
+		});
 	}
 }

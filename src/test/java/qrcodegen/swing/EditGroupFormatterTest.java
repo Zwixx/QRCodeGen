@@ -18,12 +18,13 @@
  */
 package qrcodegen.swing;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import javax.swing.text.*;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  *
@@ -38,22 +39,22 @@ public class EditGroupFormatterTest {
 	public EditGroupFormatterTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		formatter = new TestableEditGroupFormatter();
 		filter = formatter.filter;
 		fb = new MyFilterBypass();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		formatter = null;
 		filter = null;

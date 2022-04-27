@@ -18,13 +18,14 @@
  */
 package qrcodegen.math;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.number.OrderingComparison.greaterThanOrEqualTo;
 import static org.hamcrest.number.OrderingComparison.lessThan;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  *
@@ -41,15 +42,15 @@ public class PreciseArcDegreeTest {
 	public PreciseArcDegreeTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		d_90_0_0 = new PreciseArcDegree(90, 0, 0.0);
 		d_90_30_30 = new PreciseArcDegree(90, 30, 30);
@@ -58,7 +59,7 @@ public class PreciseArcDegreeTest {
 		d_5 = new PreciseArcDegree(51, 14, 4.2);
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		d_90_0_0 = null;
 		d_90_30_30 = null;

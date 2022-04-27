@@ -18,13 +18,14 @@
  */
 package qrcodegen;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  *
@@ -43,21 +44,21 @@ public class LinkifyTest {
 	public LinkifyTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		jLabel = new JLabel();
 		mouseListener = new TestMouseListener();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

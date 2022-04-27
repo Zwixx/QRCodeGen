@@ -18,9 +18,11 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 /**
  *
@@ -31,19 +33,19 @@ public class PropertyEntryTest {
 	public PropertyEntryTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

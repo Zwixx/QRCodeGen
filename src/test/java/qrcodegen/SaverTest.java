@@ -18,8 +18,7 @@
  */
 package qrcodegen;
 
-import org.junit.*;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.*;
 import qrcodegen.swing.FileChooser;
 import qrcodegen.swing.FileExtensionFilter;
 import qrcodegen.swing.Saveable;
@@ -31,8 +30,8 @@ import java.util.ListResourceBundle;
 import java.util.ResourceBundle;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  *
@@ -48,15 +47,15 @@ public class SaverTest {
 	public SaverTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		mockSaveable = new MockSaveable();
 		mockFileChooser = new MockFileChooser();
@@ -64,26 +63,26 @@ public class SaverTest {
 		res = new SaverResourceBundle();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		mockSaveable = null;
 		mockFileChooser = null;
 		txtFilter = null;
 		res = null;
 	}
-	@Rule
-	public ExpectedException thrown = ExpectedException.none();
 
 	@Test
 	public void constructorShouldThrowNullPointerExceptionIfFileChooserIsNullValue() {
-		thrown.expect(NullPointerException.class);
-		new Saver(null, mockSaveable, res);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			new Saver(null, mockSaveable, res);
+		});
 	}
 
 	@Test
 	public void constructorShouldThrowNullPointerExceptionIfSaveActionIsNullValue() {
-		thrown.expect(NullPointerException.class);
-		new Saver(mockFileChooser, null, res);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			new Saver(mockFileChooser, null, res);
+		});
 	}
 
 	@Test

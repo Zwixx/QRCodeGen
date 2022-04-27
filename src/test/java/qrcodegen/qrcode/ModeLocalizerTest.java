@@ -19,16 +19,15 @@
 package qrcodegen.qrcode;
 
 import com.google.zxing.qrcode.decoder.Mode;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
 import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  *
@@ -39,20 +38,19 @@ public class ModeLocalizerTest {
 	public ModeLocalizerTest() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
-	@Rule
-	public ExpectedException thrown = ExpectedException.none();
 
 	@Test
 	public void constructorShouldThrowNullPointerExceptionIfLocaleIsNullValue() {
-		thrown.expect(NullPointerException.class);
-		new ModeLocalizer(null);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			new ModeLocalizer(null);
+		});
 	}
 
 	@Test

@@ -18,10 +18,12 @@
  */
 package qrcodegen.modules.vcard.reader;
 
-import org.junit.*;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 /**
  *
@@ -41,15 +43,15 @@ public class KindPropertyParserTest {
 	public KindPropertyParserTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		valid_input_individual_1 = new String[]{";VALUE=TEXT", "individual"};
 		valid_input_group_1 = new String[]{null, "group"};
@@ -61,7 +63,7 @@ public class KindPropertyParserTest {
 		parser = new KindPropertyParser();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		valid_input_individual_1 = null;
 		valid_input_group_1 = null;

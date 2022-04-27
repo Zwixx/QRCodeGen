@@ -6,7 +6,7 @@ import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.common.StringUtils;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import org.junit.*;
+import org.junit.jupiter.api.*;
 import qrcodegen.QRCodeGenerator.Modus;
 import qrcodegen.tools.ImmutableDimension;
 import qrcodegen.tools.TriState;
@@ -16,7 +16,8 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.EnumMap;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -29,19 +30,19 @@ public class QRCodeGeneratorTest {
 	public QRCodeGeneratorTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 
@@ -127,11 +128,10 @@ public class QRCodeGeneratorTest {
 
 		EnumMap<DecodeHintType, Object> decodingHints = new EnumMap<DecodeHintType, Object>(DecodeHintType.class);
 		decodingHints.put(DecodeHintType.PURE_BARCODE, Boolean.TRUE);
-		//decodingHints.put(DecodeHintType.CHARACTER_SET, charset.name());
 
 		assertEquals("UTF-8", Charset.forName(StringUtils.guessEncoding(content.getBytes(charset), null)).name());
 		Result result = new QRCodeReader().decode(bitmap, decodingHints);
-		assertFalse("StringUtils.guessEncoding(String) changed?", content.equals(result.getText()));
+		assertFalse(content.equals(result.getText()));
 
 
 		content = "WIFI:S:abcdefg;T:WEP;P:הצִ;;";
@@ -259,7 +259,7 @@ public class QRCodeGeneratorTest {
 
 		Result result = new QRCodeReader().decode(bitmap, decodingHints);
 		if (TriState.TRUE == isEncodable) {
-			assertEquals("StringUtils.guessEncoding(String) changed?", content, result.getText());
+			assertEquals(content, result.getText(), "StringUtils.guessEncoding(String) changed?");
 		}
 	}
 
@@ -268,14 +268,18 @@ public class QRCodeGeneratorTest {
 		doTest("", "ISO-8859-1", ErrorCorrectionLevel.L, Modus.BEST_FIT, 100, 100, 1, TriState.TRUE, TriState.FALSE);
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void testNullContent2() throws WriterException, NotFoundException, ChecksumException, FormatException {
-		new QRCodeGenerator(null);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			new QRCodeGenerator(null);
+		});
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void testNullContent3() throws WriterException, NotFoundException, ChecksumException, FormatException, CodeSizeException {
-		doTest(null, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.BEST_FIT, 100, 100, 1, TriState.TRUE, TriState.FALSE);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			doTest(null, "ISO-8859-1", ErrorCorrectionLevel.L, Modus.BEST_FIT, 100, 100, 1, TriState.TRUE, TriState.FALSE);
+		});
 	}
 
 	@Test

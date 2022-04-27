@@ -18,14 +18,14 @@
  */
 package qrcodegen.modules;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.awt.*;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-//import static org.hamcrest.CoreMatchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  *
@@ -36,19 +36,19 @@ public class ScaleToPaperSizeTest {
 	public ScaleToPaperSizeTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

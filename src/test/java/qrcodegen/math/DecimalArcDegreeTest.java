@@ -18,12 +18,13 @@
  */
 package qrcodegen.math;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.number.OrderingComparison.greaterThanOrEqualTo;
 import static org.hamcrest.number.OrderingComparison.lessThan;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -40,15 +41,15 @@ public class DecimalArcDegreeTest {
 	public DecimalArcDegreeTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		d_90_0_0 = new DecimalArcDegree(90.0);
 		d_90_30_30 = new DecimalArcDegree(90.50833333);
@@ -58,7 +59,7 @@ public class DecimalArcDegreeTest {
 
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		d_90_0_0 = null;
 		d_90_30_30 = null;

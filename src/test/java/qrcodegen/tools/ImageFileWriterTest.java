@@ -18,7 +18,8 @@
  */
 package qrcodegen.tools;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
@@ -26,7 +27,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -41,21 +43,21 @@ public class ImageFileWriterTest {
 	public ImageFileWriterTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() throws IOException {
 		image = new BufferedImage(1, 1, BufferedImage.TYPE_BYTE_INDEXED);
 		writer = new ImageFileWriter(image);
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		image = null;
 		writer = null;
@@ -101,14 +103,18 @@ public class ImageFileWriterTest {
 		assertNotEquals(0L, output.length());
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void shouldThrowNPEIfImageIsNull() {
-		writer = new ImageFileWriter(null);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			writer = new ImageFileWriter(null);
+		});
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void shouldThrowNPEIfFileIsNull() throws FileNotFoundException, IOException {
-		writer.toFile(null);
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			writer.toFile(null);
+		});
 	}
 
 	@Test
@@ -132,37 +138,41 @@ public class ImageFileWriterTest {
 		fail();
 	}
 
-	@Test(expected = IOException.class)
+	@Test
 	public void shouldThrowIOExceptionForEmptyExtension() throws FileNotFoundException, IOException {
-		String extension = "";
-		output = File.createTempFile("imageFileWriterTest", extension, null);
-		output.deleteOnExit();
-		assertEquals(0L, output.length());
-
-		try {
-			writer.toFile(output);
-		} catch (IOException ioe) {
-			throw new IOException(ioe);
-		} finally {
-			assertTrue(output.exists());
+		Assertions.assertThrows(IOException.class, () -> {
+			String extension = "";
+			output = File.createTempFile("imageFileWriterTest", extension, null);
+			output.deleteOnExit();
 			assertEquals(0L, output.length());
-		}
+
+			try {
+				writer.toFile(output);
+			} catch (IOException ioe) {
+				throw new IOException(ioe);
+			} finally {
+				assertTrue(output.exists());
+				assertEquals(0L, output.length());
+			}
+		});
 	}
 
-	@Test(expected = IOException.class)
+	@Test
 	public void shouldThrowIOExceptionForNonImageExtension() throws FileNotFoundException, IOException {
-		String extension = ".txt";
-		output = File.createTempFile("imageFileWriterTest", extension, null);
-		output.deleteOnExit();
-		assertEquals(0L, output.length());
-
-		try {
-			writer.toFile(output);
-		} catch (IOException ioe) {
-			throw new IOException(ioe);
-		} finally {
-			assertTrue(output.exists());
+		Assertions.assertThrows(IOException.class, () -> {
+			String extension = ".txt";
+			output = File.createTempFile("imageFileWriterTest", extension, null);
+			output.deleteOnExit();
 			assertEquals(0L, output.length());
-		}
+
+			try {
+				writer.toFile(output);
+			} catch (IOException ioe) {
+				throw new IOException(ioe);
+			} finally {
+				assertTrue(output.exists());
+				assertEquals(0L, output.length());
+			}
+		});
 	}
 }

@@ -18,13 +18,13 @@
  */
 package qrcodegen.documentfilter;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.JTextComponent;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  *
@@ -35,19 +35,19 @@ public class ChainedDocumentFilterTest {
 	public ChainedDocumentFilterTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() throws Exception {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() throws Exception {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 	}
 

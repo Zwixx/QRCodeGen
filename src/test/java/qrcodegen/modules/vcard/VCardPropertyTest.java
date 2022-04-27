@@ -18,12 +18,14 @@
  */
 package qrcodegen.modules.vcard;
 
-import org.junit.*;
+
+import org.junit.jupiter.api.*;
 import qrcodegen.modules.vcard.FNProperty.Builder;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  *
@@ -37,21 +39,21 @@ public class VCardPropertyTest {
 	public VCardPropertyTest() {
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpClass() {
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownClass() {
 	}
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		fnProperty = VCardProperty.newInstance(Property.FN);
 		nProperty = VCardProperty.newInstance(Property.N);
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		fnProperty = null;
 		nProperty = null;
